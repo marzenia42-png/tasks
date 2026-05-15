@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#1A1208">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Zadania">
+<title>Zadania Dario</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>Zadania <span class="hl">Dario</span></h1>
+  <div class="stats">
+    <span id="stat-todo">0</span> do zrobienia ·
+    <span id="stat-doing">0</span> w toku ·
+    <span id="stat-done">0</span> zrobione
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="card add-form">
+    <h2>Dodaj zadanie</h2>
+    <form id="add-form">
+      <input type="text" id="task-name" placeholder="Co masz do zrobienia?" required maxlength="200" autocomplete="off">
+      <div class="row">
+        <select id="task-cat" required>
+          <option value="SOLA">SOLA</option>
+          <option value="PM">PM Solutions</option>
+          <option value="DB">DB Meble</option>
+          <option value="Agenci">Agenci</option>
+          <option value="Osobiste">Osobiste</option>
+        </select>
+        <select id="task-prio" required>
+          <option value="normal">🟢 Normalny</option>
+          <option value="important">🟡 Ważne</option>
+          <option value="urgent">🔴 Pilne</option>
+        </select>
+      </div>
+      <button type="submit" class="btn primary">Dodaj</button>
+    </form>
+  </section>
+
+  <section class="card filters">
+    <div class="filter-row" id="filter-cat">
+      <button class="chip active" data-cat="ALL">Wszystkie</button>
+      <button class="chip" data-cat="SOLA">SOLA</button>
+      <button class="chip" data-cat="PM">PM</button>
+      <button class="chip" data-cat="DB">DB</button>
+      <button class="chip" data-cat="Agenci">Agenci</button>
+      <button class="chip" data-cat="Osobiste">Osobiste</button>
+    </div>
+    <div class="filter-row" id="filter-status">
+      <button class="chip active" data-status="ACTIVE">Aktywne</button>
+      <button class="chip" data-status="todo">Do zrobienia</button>
+      <button class="chip" data-status="doing">W toku</button>
+      <button class="chip" data-status="ARCHIVE">Archiwum</button>
+    </div>
+  </section>
+
+  <section id="task-list-section">
+    <ul id="task-list" class="task-list"></ul>
+    <p id="empty-state" class="empty">Brak zadań w tym widoku.</p>
+  </section>
+
+</main>
+
+<footer class="footbar">
+  <button id="clear-archive" class="btn ghost small">Wyczyść archiwum</button>
+  <button id="export-data" class="btn ghost small">Eksport JSON</button>
+  <button id="import-data" class="btn ghost small">Import JSON</button>
+  <input type="file" id="import-file" accept=".json" style="display:none">
+</footer>
+
+<template id="task-item-tpl">
+  <li class="task" data-id="">
+    <div class="task-main">
+      <button class="status-btn" aria-label="Zmień status"></button>
+      <div class="task-text">
+        <div class="task-name"></div>
+        <div class="task-meta">
+          <span class="badge cat"></span>
+          <span class="badge prio"></span>
+          <span class="date"></span>
+        </div>
+      </div>
+    </div>
+    <button class="del-btn" aria-label="Usuń">✕</button>
+  </li>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>
