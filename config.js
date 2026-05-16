@@ -4,7 +4,7 @@
 //
 // Po utworzeniu Supabase projektu "tasks-dario" wstaw poniżej:
 window.SUPABASE_CONFIG = {
-  url: 'PLACEHOLDER_SUPABASE_URL',
-  anonKey: 'PLACEHOLDER_SUPABASE_ANON_KEY',
+  url: 'https://unzqzeqorlbxhytfhorm.supabase.co',
+  anonKey: 'sb_publishable_2jaIUfWOsqBlHeruAP3G1w_BCnIB28I',
   table: 'dario_tasks'
 };
