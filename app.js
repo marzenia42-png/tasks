@@ -1,8 +1,10 @@
 (function () {
   'use strict';
 
-  const STORAGE_KEY = 'dario.tasks.v1';
-  const SEEDED_KEY = 'dario.tasks.seeded.v1';
+  const CACHE_KEY = 'dario.tasks.cache.v2';
+  const CFG = window.SUPABASE_CONFIG || {};
+  const TABLE = CFG.table || 'dario_tasks';
+  const HAS_CFG = CFG.url && CFG.anonKey && !CFG.url.startsWith('PLACEHOLDER');
 
   const CATEGORIES = {
     SOLA: 'SOLA',
@@ -18,140 +20,196 @@
     normal: '🟢 Normalny'
   };
 
-  const PRIO_ORDER = { urgent: 0, important: 1, normal: 2 };
-  const STATUS_ORDER = { doing: 0, todo: 1, done: 2 };
-  const STATUS_NEXT = { todo: 'doing', doing: 'done', done: 'todo' };
+  const STATUS_LABEL = {
+    todo: 'Do zrobienia',
+    doing: 'W toku',
+    done: 'Zrobione',
+    idea: 'Pomysł',
+    abandoned: 'Porzucone'
+  };
 
-  const SEED_TASKS = [
-    // SOLA
-    { name: 'Fix karta Finanse', cat: 'SOLA', prio: 'urgent' },
-    { name: 'Testy UI rejestracji', cat: 'SOLA', prio: 'important' },
-    { name: 'Usunięcie testowych userów', cat: 'SOLA', prio: 'important' },
-    { name: 'LyraGlobe.jsx', cat: 'SOLA', prio: 'normal' },
-    // PM Solutions
-    { name: 'Logo fix', cat: 'PM', prio: 'urgent' },
-    { name: 'FAQ treść', cat: 'PM', prio: 'important' },
-    { name: 'Zdjęcia zakładek', cat: 'PM', prio: 'important' },
-    { name: 'Ukrycie starych produktów', cat: 'PM', prio: 'important' },
-    { name: 'Nowe opisy', cat: 'PM', prio: 'normal' },
-    // DB Meble
-    { name: 'LinkedIn Bejot Linje (dziś)', cat: 'DB', prio: 'urgent' },
-    { name: 'Plan postów maj', cat: 'DB', prio: 'important' },
-    // Agenci
-    { name: '6 emaili → 1 agent Make', cat: 'Agenci', prio: 'important' },
-    { name: 'Agent Wiedzy Produktowej', cat: 'Agenci', prio: 'important' },
-    // Osobiste
-    { name: 'Second Brain Faza 1 (Tailscale)', cat: 'Osobiste', prio: 'important' },
-    { name: 'Analiza telefonu ADB', cat: 'Osobiste', prio: 'normal' },
-    { name: 'Lista zadań (ta appka) — wdrożenie', cat: 'Osobiste', prio: 'normal' }
-  ];
+  const PRIO_ORDER = { urgent: 0, important: 1, normal: 2 };
+  const STATUS_ORDER = { doing: 0, todo: 1, idea: 2, done: 3, abandoned: 4 };
+  const STATUS_NEXT = { todo: 'doing', doing: 'done', done: 'todo', idea: 'todo', abandoned: 'todo' };
 
   let state = {
     tasks: [],
     filterCat: 'ALL',
-    filterStatus: 'ACTIVE'
+    filterStatus: 'ACTIVE',
+    filterSubcat: 'ALL',
+    search: '',
+    connected: false,
+    loading: true
   };
 
-  function load() {
+  let supabase = null;
+
+  function setConnStatus(text, cls) {
+    const el = document.getElementById('conn-status');
+    if (!el) return;
+    el.textContent = text;
+    el.className = 'conn ' + (cls || '');
+  }
+
+  function loadCache() {
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
+      const raw = localStorage.getItem(CACHE_KEY);
       if (raw) state.tasks = JSON.parse(raw);
     } catch (e) {
-      console.warn('Storage load failed', e);
-      state.tasks = [];
-    }
-
-    if (!localStorage.getItem(SEEDED_KEY)) {
-      const now = Date.now();
-      SEED_TASKS.forEach((t, i) => {
-        state.tasks.push({
-          id: 'seed-' + now + '-' + i,
-          name: t.name,
-          cat: t.cat,
-          prio: t.prio,
-          status: 'todo',
-          createdAt: now + i
-        });
-      });
-      localStorage.setItem(SEEDED_KEY, '1');
-      save();
+      console.warn('Cache load failed', e);
     }
   }
 
-  function save() {
+  function saveCache() {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state.tasks));
+      localStorage.setItem(CACHE_KEY, JSON.stringify(state.tasks));
     } catch (e) {
-      alert('Błąd zapisu: ' + e.message);
+      console.warn('Cache save failed', e);
     }
   }
 
-  function uid() {
-    return 't-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 8);
-  }
-
-  function addTask(name, cat, prio) {
-    state.tasks.push({
-      id: uid(),
-      name: name.trim(),
-      cat: cat,
-      prio: prio,
-      status: 'todo',
-      createdAt: Date.now()
-    });
-    save();
-    render();
-  }
-
-  function toggleStatus(id) {
-    const t = state.tasks.find(x => x.id === id);
-    if (!t) return;
-    t.status = STATUS_NEXT[t.status] || 'todo';
-    if (t.status === 'done') t.doneAt = Date.now();
-    save();
-    render();
-  }
-
-  function deleteTask(id) {
-    state.tasks = state.tasks.filter(t => t.id !== id);
-    save();
-    render();
-  }
-
-  function clearArchive() {
-    const archived = state.tasks.filter(t => t.status === 'done').length;
-    if (!archived) {
-      alert('Archiwum jest puste.');
+  async function fetchAll() {
+    if (!supabase) return;
+    state.loading = true;
+    renderLoading();
+    const { data, error } = await supabase
+      .from(TABLE)
+      .select('*')
+      .order('created_at', { ascending: true });
+    state.loading = false;
+    if (error) {
+      console.error('Fetch error', error);
+      setConnStatus('● offline (cache)', 'offline');
+      render();
       return;
     }
-    if (!confirm('Usunąć ' + archived + ' zarchiwizowanych zadań na stałe?')) return;
-    state.tasks = state.tasks.filter(t => t.status !== 'done');
-    save();
+    state.tasks = data || [];
+    state.connected = true;
+    setConnStatus('● live', 'online');
+    saveCache();
     render();
+  }
+
+  async function addTask(name, category, priority) {
+    const optimistic = {
+      id: 'temp-' + Date.now(),
+      name: name.trim(),
+      category: category,
+      subcategory: 'Manualne',
+      priority: priority,
+      status: 'todo',
+      created_at: new Date().toISOString(),
+      _optimistic: true
+    };
+    state.tasks.push(optimistic);
+    render();
+
+    if (!supabase) return;
+    const { data, error } = await supabase
+      .from(TABLE)
+      .insert({
+        name: optimistic.name,
+        category: category,
+        subcategory: 'Manualne',
+        priority: priority,
+        status: 'todo'
+      })
+      .select()
+      .single();
+    if (error) {
+      alert('Błąd dodawania: ' + error.message);
+      state.tasks = state.tasks.filter(t => t.id !== optimistic.id);
+      render();
+      return;
+    }
+    Object.assign(optimistic, data);
+    delete optimistic._optimistic;
+    saveCache();
+    render();
+  }
+
+  async function toggleStatus(id) {
+    const t = state.tasks.find(x => x.id === id);
+    if (!t) return;
+    const nextStatus = STATUS_NEXT[t.status] || 'todo';
+    const prevStatus = t.status;
+    t.status = nextStatus;
+    if (nextStatus === 'done') t.done_at = new Date().toISOString();
+    render();
+    saveCache();
+
+    if (!supabase || String(id).startsWith('temp-')) return;
+    const { error } = await supabase
+      .from(TABLE)
+      .update({ status: nextStatus })
+      .eq('id', id);
+    if (error) {
+      console.error('Update error', error);
+      t.status = prevStatus;
+      render();
+    }
+  }
+
+  async function deleteTask(id) {
+    const idx = state.tasks.findIndex(t => t.id === id);
+    if (idx === -1) return;
+    const removed = state.tasks.splice(idx, 1)[0];
+    render();
+    saveCache();
+
+    if (!supabase || String(id).startsWith('temp-')) return;
+    const { error } = await supabase.from(TABLE).delete().eq('id', id);
+    if (error) {
+      console.error('Delete error', error);
+      state.tasks.splice(idx, 0, removed);
+      render();
+    }
   }
 
   function getFiltered() {
+    const q = state.search.trim().toLowerCase();
     return state.tasks.filter(t => {
-      if (state.filterCat !== 'ALL' && t.cat !== state.filterCat) return false;
-      if (state.filterStatus === 'ACTIVE') return t.status !== 'done';
-      if (state.filterStatus === 'ARCHIVE') return t.status === 'done';
-      return t.status === state.filterStatus;
+      if (state.filterCat !== 'ALL' && t.category !== state.filterCat) return false;
+      if (state.filterStatus === 'ACTIVE') {
+        if (t.status === 'done' || t.status === 'abandoned' || t.status === 'idea') return false;
+      } else if (state.filterStatus === 'ARCHIVE') {
+        if (t.status !== 'done') return false;
+      } else {
+        if (t.status !== state.filterStatus) return false;
+      }
+      if (state.filterSubcat !== 'ALL' && (t.subcategory || '') !== state.filterSubcat) return false;
+      if (q) {
+        const hay = (t.name + ' ' + (t.subcategory || '') + ' ' + (t.source || '')).toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
     }).sort((a, b) => {
-      const s = STATUS_ORDER[a.status] - STATUS_ORDER[b.status];
+      const s = (STATUS_ORDER[a.status] != null ? STATUS_ORDER[a.status] : 9) - (STATUS_ORDER[b.status] != null ? STATUS_ORDER[b.status] : 9);
       if (s !== 0) return s;
-      const p = PRIO_ORDER[a.prio] - PRIO_ORDER[b.prio];
+      const p = (PRIO_ORDER[a.priority] != null ? PRIO_ORDER[a.priority] : 9) - (PRIO_ORDER[b.priority] != null ? PRIO_ORDER[b.priority] : 9);
       if (p !== 0) return p;
-      return a.createdAt - b.createdAt;
+      return new Date(a.created_at) - new Date(b.created_at);
     });
   }
 
+  function uniqueSubcats() {
+    if (state.filterCat === 'ALL') return [];
+    const set = new Set();
+    state.tasks.forEach(t => {
+      if (t.category === state.filterCat && t.subcategory) set.add(t.subcategory);
+    });
+    return Array.from(set).sort();
+  }
+
   function formatDate(ts) {
+    if (!ts) return '';
     const d = new Date(ts);
     const now = new Date();
     const diffDays = Math.floor((now - d) / 86400000);
     if (diffDays === 0) return 'dziś';
     if (diffDays === 1) return 'wczoraj';
     if (diffDays < 7) return diffDays + ' dni temu';
+    if (diffDays > 365) return d.toLocaleDateString('pl-PL', { year: 'numeric', month: '2-digit', day: '2-digit' });
     return d.toLocaleDateString('pl-PL', { day: '2-digit', month: '2-digit' });
   }
 
@@ -164,11 +222,45 @@
     document.getElementById('stat-done').textContent = done;
   }
 
+  function renderSubcats() {
+    const box = document.getElementById('filter-subcat');
+    const subs = uniqueSubcats();
+    if (state.filterCat === 'ALL' || subs.length < 2) {
+      box.style.display = 'none';
+      box.innerHTML = '';
+      state.filterSubcat = 'ALL';
+      return;
+    }
+    box.style.display = 'flex';
+    box.innerHTML = '';
+    const all = document.createElement('button');
+    all.className = 'chip' + (state.filterSubcat === 'ALL' ? ' active' : '');
+    all.textContent = 'wszystkie ' + state.filterCat;
+    all.dataset.subcat = 'ALL';
+    box.appendChild(all);
+    subs.forEach(s => {
+      const b = document.createElement('button');
+      b.className = 'chip' + (state.filterSubcat === s ? ' active' : '');
+      b.textContent = s.toLowerCase();
+      b.dataset.subcat = s;
+      box.appendChild(b);
+    });
+  }
+
+  function renderLoading() {
+    const loading = document.getElementById('loading-state');
+    if (loading) loading.style.display = state.loading ? 'block' : 'none';
+  }
+
   function render() {
     const ul = document.getElementById('task-list');
     const tpl = document.getElementById('task-item-tpl');
     const empty = document.getElementById('empty-state');
+    const loading = document.getElementById('loading-state');
     ul.innerHTML = '';
+
+    if (loading) loading.style.display = state.loading ? 'block' : 'none';
+    if (state.loading) { empty.style.display = 'none'; return; }
 
     const filtered = getFiltered();
 
@@ -181,12 +273,26 @@
         node.dataset.id = t.id;
         node.dataset.status = t.status;
         node.querySelector('.task-name').textContent = t.name;
-        const catEl = node.querySelector('.badge.cat');
-        catEl.textContent = CATEGORIES[t.cat] || t.cat;
+        node.querySelector('.badge.cat').textContent = CATEGORIES[t.category] || t.category;
+
         const prioEl = node.querySelector('.badge.prio');
-        prioEl.textContent = PRIO_LABEL[t.prio];
-        prioEl.classList.add(t.prio);
-        node.querySelector('.date').textContent = formatDate(t.doneAt || t.createdAt);
+        prioEl.textContent = PRIO_LABEL[t.priority] || t.priority;
+        prioEl.classList.add(t.priority);
+
+        const subcatEl = node.querySelector('.badge.subcat');
+        if (t.subcategory && t.subcategory !== t.category && t.subcategory !== 'Manualne') {
+          subcatEl.textContent = t.subcategory.toLowerCase();
+          subcatEl.style.display = '';
+        } else {
+          subcatEl.style.display = 'none';
+        }
+
+        const dateEl = node.querySelector('.date');
+        if (t.due_date) {
+          dateEl.textContent = '📅 ' + new Date(t.due_date).toLocaleDateString('pl-PL', { day: '2-digit', month: '2-digit', year: '2-digit' });
+        } else {
+          dateEl.textContent = formatDate(t.done_at || t.created_at);
+        }
 
         node.querySelector('.status-btn').addEventListener('click', (e) => {
           e.stopPropagation();
@@ -203,6 +309,7 @@
     }
 
     renderStats();
+    renderSubcats();
   }
 
   function bindFilters() {
@@ -210,6 +317,7 @@
       const btn = e.target.closest('.chip');
       if (!btn) return;
       state.filterCat = btn.dataset.cat;
+      state.filterSubcat = 'ALL';
       document.querySelectorAll('#filter-cat .chip').forEach(c => c.classList.remove('active'));
       btn.classList.add('active');
       render();
@@ -222,6 +330,23 @@
       document.querySelectorAll('#filter-status .chip').forEach(c => c.classList.remove('active'));
       btn.classList.add('active');
       render();
+    });
+
+    document.getElementById('filter-subcat').addEventListener('click', (e) => {
+      const btn = e.target.closest('.chip');
+      if (!btn) return;
+      state.filterSubcat = btn.dataset.subcat;
+      render();
+    });
+
+    const search = document.getElementById('search-input');
+    let timer = null;
+    search.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        state.search = search.value;
+        render();
+      }, 150);
     });
   }
 
@@ -239,7 +364,7 @@
   }
 
   function bindFooter() {
-    document.getElementById('clear-archive').addEventListener('click', clearArchive);
+    document.getElementById('refresh-data').addEventListener('click', fetchAll);
 
     document.getElementById('export-data').addEventListener('click', () => {
       const blob = new Blob([JSON.stringify(state.tasks, null, 2)], { type: 'application/json' });
@@ -250,29 +375,27 @@
       a.click();
       URL.revokeObjectURL(url);
     });
+  }
 
-    document.getElementById('import-data').addEventListener('click', () => {
-      document.getElementById('import-file').click();
-    });
-
-    document.getElementById('import-file').addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        try {
-          const data = JSON.parse(ev.target.result);
-          if (!Array.isArray(data)) throw new Error('Nieprawidłowy format');
-          if (!confirm('Zastąpić ' + state.tasks.length + ' obecnych zadań ' + data.length + ' z pliku?')) return;
-          state.tasks = data;
-          save();
-          render();
-        } catch (err) {
-          alert('Błąd importu: ' + err.message);
+  function subscribeRealtime() {
+    if (!supabase) return;
+    supabase
+      .channel('public:' + TABLE)
+      .on('postgres_changes', { event: '*', schema: 'public', table: TABLE }, (payload) => {
+        if (payload.eventType === 'INSERT') {
+          if (!state.tasks.find(t => t.id === payload.new.id)) {
+            state.tasks.push(payload.new);
+          }
+        } else if (payload.eventType === 'UPDATE') {
+          const i = state.tasks.findIndex(t => t.id === payload.new.id);
+          if (i >= 0) state.tasks[i] = payload.new;
+        } else if (payload.eventType === 'DELETE') {
+          state.tasks = state.tasks.filter(t => t.id !== payload.old.id);
         }
-      };
-      reader.readAsText(file);
-    });
+        saveCache();
+        render();
+      })
+      .subscribe();
   }
 
   function registerSW() {
@@ -284,11 +407,22 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    load();
+    loadCache();
     bindForm();
     bindFilters();
     bindFooter();
-    render();
+
+    if (HAS_CFG && typeof window.supabase !== 'undefined') {
+      supabase = window.supabase.createClient(CFG.url, CFG.anonKey);
+      setConnStatus('● łączenie…', 'pending');
+      fetchAll().then(() => subscribeRealtime());
+    } else {
+      state.loading = false;
+      state.tasks = state.tasks || [];
+      setConnStatus('● bez Supabase (config)', 'offline');
+      render();
+    }
+
     registerSW();
   });
 })();

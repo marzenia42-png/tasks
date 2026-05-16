@@ -21,6 +21,7 @@
     <span id="stat-todo">0</span> do zrobienia ·
     <span id="stat-doing">0</span> w toku ·
     <span id="stat-done">0</span> zrobione
+    <span id="conn-status" class="conn"></span>
   </div>
 </header>
 
@@ -61,22 +62,29 @@
       <button class="chip active" data-status="ACTIVE">Aktywne</button>
       <button class="chip" data-status="todo">Do zrobienia</button>
       <button class="chip" data-status="doing">W toku</button>
-      <button class="chip" data-status="ARCHIVE">Archiwum</button>
+      <button class="chip" data-status="idea">Pomysły</button>
+      <button class="chip" data-status="ARCHIVE">Zrobione</button>
+      <button class="chip" data-status="abandoned">Porzucone</button>
+    </div>
+    <div class="filter-row" id="filter-subcat" style="display:none">
+      <!-- Wypełniane dynamicznie po wyborze kategorii -->
+    </div>
+    <div class="filter-row search-row">
+      <input type="text" id="search-input" placeholder="Szukaj…" class="search-input" autocomplete="off">
     </div>
   </section>
 
   <section id="task-list-section">
     <ul id="task-list" class="task-list"></ul>
     <p id="empty-state" class="empty">Brak zadań w tym widoku.</p>
+    <p id="loading-state" class="empty">Ładuję zadania…</p>
   </section>
 
 </main>
 
 <footer class="footbar">
-  <button id="clear-archive" class="btn ghost small">Wyczyść archiwum</button>
+  <button id="refresh-data" class="btn ghost small">↻ Odśwież</button>
   <button id="export-data" class="btn ghost small">Eksport JSON</button>
-  <button id="import-data" class="btn ghost small">Import JSON</button>
-  <input type="file" id="import-file" accept=".json" style="display:none">
 </footer>
 
 <template id="task-item-tpl">
@@ -88,6 +96,7 @@
         <div class="task-meta">
           <span class="badge cat"></span>
           <span class="badge prio"></span>
+          <span class="badge subcat"></span>
           <span class="date"></span>
         </div>
       </div>
@@ -96,6 +105,8 @@
   </li>
 </template>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

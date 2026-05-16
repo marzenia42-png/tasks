@@ -1,0 +1,12 @@
+# Cache rclone i lokalne pliki (źródło na Drive)
+data/MASTER_LISTA_ZADAN_DARIO_v2.md
+
+# Logi
+*.log
+
+# Lokalne pliki edytora
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

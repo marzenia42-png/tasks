@@ -1,9 +1,10 @@
-const CACHE = 'zadania-dario-v1';
+const CACHE = 'zadania-dario-v2-supabase';
 const ASSETS = [
   './',
   './index.html',
   './style.css',
   './app.js',
+  './config.js',
   './manifest.json',
   './icon.svg',
   './icon-192.png',
