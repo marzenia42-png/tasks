@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
 <meta name="theme-color" content="#FAF7F0">
 <script>
-  // Wcześniej niż CSS — zapobiega FOUC przy reload (cache theme z localStorage)
   (function () {
     var t = localStorage.getItem('dario.tasks.theme') || 'light';
     document.documentElement.setAttribute('data-theme', t);
@@ -25,9 +24,11 @@
 
 <header class="topbar">
   <div class="topbar-row">
-    <h1>Zadania <span class="hl">Dario</span></h1>
+    <button id="back-btn" class="back-btn" hidden>←</button>
+    <h1 id="page-title">Zadania <span class="hl">Dario</span></h1>
     <button id="theme-toggle" class="theme-btn" aria-label="Przełącz tryb">🌙</button>
   </div>
+  <nav id="breadcrumb" class="breadcrumb" hidden></nav>
   <div class="stats">
     <span id="stat-todo">0</span> do zrobienia ·
     <span id="stat-doing">0</span> w toku ·
@@ -38,58 +39,82 @@
 
 <main class="container">
 
-  <section class="card add-form">
-    <h2>Dodaj zadanie</h2>
-    <form id="add-form">
-      <input type="text" id="task-name" placeholder="Co masz do zrobienia?" required maxlength="200" autocomplete="off">
-      <div class="row">
-        <select id="task-cat" required>
-          <option value="SOLA">SOLA</option>
-          <option value="PM">PM Solutions</option>
-          <option value="DB">DB Meble</option>
-          <option value="Agenci">Agenci</option>
-          <option value="Osobiste">Osobiste</option>
-        </select>
-        <select id="task-prio" required>
-          <option value="normal">🟢 Normalny</option>
-          <option value="important">🟡 Ważne</option>
-          <option value="urgent">🔴 Pilne</option>
-        </select>
+  <!-- ============= VIEW: AREAS (heksagony) ============= -->
+  <section id="view-areas" class="view">
+    <div class="hex-grid">
+      <button class="hex" data-area="praca" style="--area-color: #4A8FB8;">
+        <span class="hex-emoji">💼</span>
+        <span class="hex-name">Praca</span>
+        <span class="hex-count" data-area-count="praca">0</span>
+      </button>
+      <button class="hex" data-area="zdrowie" style="--area-color: #7BA86A;">
+        <span class="hex-emoji">💚</span>
+        <span class="hex-name">Zdrowie</span>
+        <span class="hex-count" data-area-count="zdrowie">0</span>
+      </button>
+      <button class="hex" data-area="relacje" style="--area-color: #D44A3A;">
+        <span class="hex-emoji">❤️</span>
+        <span class="hex-name">Relacje</span>
+        <span class="hex-count" data-area-count="relacje">0</span>
+      </button>
+      <button class="hex" data-area="finanse" style="--area-color: #C9A96E;">
+        <span class="hex-emoji">💰</span>
+        <span class="hex-name">Finanse</span>
+        <span class="hex-count" data-area-count="finanse">0</span>
+      </button>
+      <button class="hex" data-area="hobby" style="--area-color: #B88B1E;">
+        <span class="hex-emoji">🎯</span>
+        <span class="hex-name">Hobby</span>
+        <span class="hex-count" data-area-count="hobby">0</span>
+      </button>
+      <button class="hex" data-area="marzenia" style="--area-color: #8B6FB8;">
+        <span class="hex-emoji">✨</span>
+        <span class="hex-name">Marzenia</span>
+        <span class="hex-count" data-area-count="marzenia">0</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============= VIEW: PROJECTS ============= -->
+  <section id="view-projects" class="view" hidden>
+    <ul id="proj-list" class="proj-list"></ul>
+  </section>
+
+  <!-- ============= VIEW: TASKS ============= -->
+  <section id="view-tasks" class="view" hidden>
+    <section class="card add-form">
+      <form id="add-form">
+        <input type="text" id="task-name" placeholder="+ Nowe zadanie..." required maxlength="200" autocomplete="off">
+        <div class="row">
+          <select id="task-prio">
+            <option value="normal">🟢 Normalny</option>
+            <option value="important">🟡 Ważne</option>
+            <option value="urgent">🔴 Pilne</option>
+          </select>
+          <button type="submit" class="btn primary">Dodaj</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card filters">
+      <div class="filter-row" id="filter-status">
+        <button class="chip active" data-status="ACTIVE">Aktywne <span class="chip-count" data-count="ACTIVE">0</span></button>
+        <button class="chip" data-status="todo">Do zrobienia <span class="chip-count" data-count="todo">0</span></button>
+        <button class="chip" data-status="doing">W toku <span class="chip-count" data-count="doing">0</span></button>
+        <button class="chip" data-status="idea">Pomysły <span class="chip-count" data-count="idea">0</span></button>
+        <button class="chip done-chip" data-status="ARCHIVE">✓ Zrealizowane <span class="chip-count" data-count="done">0</span></button>
+        <button class="chip" data-status="abandoned">Porzucone <span class="chip-count" data-count="abandoned">0</span></button>
       </div>
-      <button type="submit" class="btn primary">Dodaj</button>
-    </form>
-  </section>
+      <div class="filter-row search-row">
+        <input type="text" id="search-input" placeholder="Szukaj…" class="search-input" autocomplete="off">
+      </div>
+    </section>
 
-  <section class="card filters">
-    <div class="filter-row" id="filter-cat">
-      <button class="chip active" data-cat="ALL">Wszystkie</button>
-      <button class="chip" data-cat="SOLA">SOLA</button>
-      <button class="chip" data-cat="PM">PM</button>
-      <button class="chip" data-cat="DB">DB</button>
-      <button class="chip" data-cat="Agenci">Agenci</button>
-      <button class="chip" data-cat="Osobiste">Osobiste</button>
-    </div>
-    <div class="filter-row" id="filter-status">
-      <button class="chip active" data-status="ACTIVE">Aktywne <span class="chip-count" data-count="ACTIVE">0</span></button>
-      <button class="chip" data-status="todo">Do zrobienia <span class="chip-count" data-count="todo">0</span></button>
-      <button class="chip" data-status="doing">W toku <span class="chip-count" data-count="doing">0</span></button>
-      <button class="chip" data-status="idea">Pomysły <span class="chip-count" data-count="idea">0</span></button>
-      <button class="chip done-chip" data-status="ARCHIVE">✓ Zrealizowane <span class="chip-count" data-count="done">0</span></button>
-      <button class="chip" data-status="abandoned">Porzucone <span class="chip-count" data-count="abandoned">0</span></button>
-    </div>
-    <div class="filter-row" id="filter-subcat" style="display:none">
-      <!-- Wypełniane dynamicznie po wyborze kategorii -->
-    </div>
-    <div class="filter-row search-row">
-      <input type="text" id="search-input" placeholder="Szukaj…" class="search-input" autocomplete="off">
-    </div>
-  </section>
-
-  <section id="task-list-section">
     <ul id="task-list" class="task-list"></ul>
     <p id="empty-state" class="empty">Brak zadań w tym widoku.</p>
-    <p id="loading-state" class="empty">Ładuję zadania…</p>
   </section>
+
+  <p id="loading-state" class="empty" hidden>Ładuję zadania…</p>
 
 </main>
 
@@ -98,6 +123,7 @@
   <button id="export-data" class="btn ghost small">Eksport JSON</button>
 </footer>
 
+<!-- ============= TASK LIST ITEM TEMPLATE ============= -->
 <template id="task-item-tpl">
   <li class="task" data-id="">
     <div class="task-main">
@@ -105,17 +131,104 @@
       <div class="task-text">
         <div class="task-name"></div>
         <div class="task-meta">
-          <span class="badge cat"></span>
           <span class="badge prio"></span>
           <span class="badge subcat"></span>
           <span class="date"></span>
         </div>
       </div>
+      <button class="open-detail" aria-label="Otwórz szczegóły">›</button>
     </div>
-    <button class="del-btn" aria-label="Usuń">✕</button>
   </li>
 </template>
 
+<!-- ============= PROJECT LIST ITEM TEMPLATE ============= -->
+<template id="proj-item-tpl">
+  <li class="proj">
+    <div class="proj-icon">📁</div>
+    <div class="proj-text">
+      <div class="proj-name"></div>
+      <div class="proj-counts">
+        <span class="proj-count-todo"></span>
+        <span class="proj-count-doing"></span>
+        <span class="proj-count-done"></span>
+      </div>
+    </div>
+    <div class="proj-arrow">›</div>
+  </li>
+</template>
+
+<!-- ============= TASK DETAIL MODAL ============= -->
+<div id="task-modal" class="modal" hidden>
+  <div class="modal-backdrop"></div>
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close" aria-label="Zamknij">✕</button>
+
+    <input type="text" id="modal-title-input" class="modal-title-input" placeholder="Tytuł zadania">
+
+    <div class="modal-meta">
+      <span class="modal-area-badge" id="modal-area-badge"></span>
+      <span class="badge subcat" id="modal-subcat-badge"></span>
+    </div>
+
+    <div class="modal-section">
+      <label class="modal-label">Opis</label>
+      <textarea id="modal-description" placeholder="Krótki opis…" rows="2"></textarea>
+    </div>
+
+    <div class="modal-section">
+      <label class="modal-label">Notatki własne</label>
+      <textarea id="modal-notes" placeholder="Notatki, linki, kontekst…" rows="4"></textarea>
+    </div>
+
+    <div class="modal-section">
+      <label class="modal-label">📷 Galeria</label>
+      <div id="modal-images" class="modal-images"></div>
+      <input type="file" id="modal-upload" accept="image/*" multiple hidden>
+      <button class="btn ghost small" id="modal-upload-btn">+ Dodaj zdjęcie</button>
+    </div>
+
+    <div class="modal-section">
+      <label class="modal-label">📅 Termin realizacji</label>
+      <div class="modal-row">
+        <input type="date" id="modal-due-date">
+        <button class="btn ghost small" id="modal-gcal-btn">+ Dodaj do GCal</button>
+      </div>
+      <a id="modal-gcal-link" class="modal-gcal-link" hidden target="_blank">✓ W kalendarzu — otwórz</a>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-row">
+        <label class="modal-field">
+          <span class="modal-label">Status</span>
+          <select id="modal-status">
+            <option value="todo">Do zrobienia</option>
+            <option value="doing">W toku</option>
+            <option value="done">Zrobione</option>
+            <option value="idea">Pomysł</option>
+            <option value="abandoned">Porzucone</option>
+          </select>
+        </label>
+        <label class="modal-field">
+          <span class="modal-label">Priorytet</span>
+          <select id="modal-priority">
+            <option value="normal">🟢 Normalny</option>
+            <option value="important">🟡 Ważne</option>
+            <option value="urgent">🔴 Pilne</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="modal-source" id="modal-source"></div>
+
+    <div class="modal-actions">
+      <button class="btn primary" id="modal-save">Zapisz</button>
+      <button class="btn danger" id="modal-delete">Usuń zadanie</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============= TOAST UNDO ============= -->
 <div id="toast" class="toast" role="status" aria-live="polite" hidden>
   <span id="toast-msg"></span>
   <button id="toast-undo" class="toast-undo">Cofnij</button>
