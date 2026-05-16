@@ -333,6 +333,8 @@
     document.getElementById('modal-notes').value = t.notes || '';
     document.getElementById('modal-status').value = t.status || 'todo';
     document.getElementById('modal-priority').value = t.priority || 'normal';
+    document.getElementById('modal-area').value = t.area || 'praca';
+    document.getElementById('modal-subcategory').value = t.subcategory || '';
     document.getElementById('modal-due-date').value = t.due_date || '';
 
     const areaBadge = document.getElementById('modal-area-badge');
@@ -439,6 +441,8 @@
       notes: document.getElementById('modal-notes').value.trim() || null,
       status: document.getElementById('modal-status').value,
       priority: document.getElementById('modal-priority').value,
+      area: document.getElementById('modal-area').value,
+      subcategory: document.getElementById('modal-subcategory').value.trim() || null,
       due_date: document.getElementById('modal-due-date').value || null
     };
     if (!patch.name) { alert('Tytuł nie może być pusty'); return; }
@@ -609,6 +613,40 @@
     });
   }
 
+  async function quickAddViaFab() {
+    const name = prompt('Nowe zadanie — tytuł:');
+    if (!name || !name.trim()) return;
+    const area = state.currentArea || 'praca';
+    const subcategory = state.currentSubcat || 'Inbox';
+    const payload = {
+      name: name.trim(),
+      area: area,
+      category: 'Osobiste',
+      subcategory: subcategory,
+      priority: 'normal',
+      status: 'todo'
+    };
+    const optimistic = Object.assign({ id: 'temp-' + Date.now(), images: [], created_at: new Date().toISOString() }, payload);
+    state.tasks.push(optimistic);
+    renderCurrent();
+    if (!supabase) return;
+    const created = await createTask(payload);
+    if (created) {
+      const i = state.tasks.findIndex(t => t.id === optimistic.id);
+      if (i >= 0) state.tasks[i] = created;
+      saveCache();
+      // Otwórz detail dla doprecyzowania
+      openDetail(created.id);
+    } else {
+      state.tasks = state.tasks.filter(t => t.id !== optimistic.id);
+      renderCurrent();
+    }
+  }
+
+  function bindFab() {
+    document.getElementById('fab-add').addEventListener('click', quickAddViaFab);
+  }
+
   function registerSW() {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -627,6 +665,7 @@
     bindForm();
     bindFooter();
     bindModal();
+    bindFab();
 
     if (HAS_CFG && typeof window.supabase !== 'undefined') {
       supabase = window.supabase.createClient(CFG.url, CFG.anonKey);

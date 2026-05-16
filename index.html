@@ -123,6 +123,8 @@
   <button id="export-data" class="btn ghost small">Eksport JSON</button>
 </footer>
 
+<button id="fab-add" class="fab" aria-label="Dodaj zadanie">+</button>
+
 <!-- ============= TASK LIST ITEM TEMPLATE ============= -->
 <template id="task-item-tpl">
   <li class="task" data-id="">
@@ -194,6 +196,26 @@
         <button class="btn ghost small" id="modal-gcal-btn">+ Dodaj do GCal</button>
       </div>
       <a id="modal-gcal-link" class="modal-gcal-link" hidden target="_blank">✓ W kalendarzu — otwórz</a>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-row">
+        <label class="modal-field">
+          <span class="modal-label">Obszar</span>
+          <select id="modal-area">
+            <option value="praca">💼 Praca</option>
+            <option value="zdrowie">💚 Zdrowie</option>
+            <option value="relacje">❤️ Relacje</option>
+            <option value="finanse">💰 Finanse</option>
+            <option value="hobby">🎯 Hobby</option>
+            <option value="marzenia">✨ Marzenia</option>
+          </select>
+        </label>
+        <label class="modal-field">
+          <span class="modal-label">Projekt</span>
+          <input type="text" id="modal-subcategory" placeholder="np. SOLA, DB Meble">
+        </label>
+      </div>
     </div>
 
     <div class="modal-section">

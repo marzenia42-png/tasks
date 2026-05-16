@@ -1,4 +1,4 @@
-const CACHE = 'zadania-dario-v4-hex-hierarchy';
+const CACHE = 'zadania-dario-v5-area-edit-fab';
 const ASSETS = [
   './',
   './index.html',
