@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-<meta name="theme-color" content="#1A1208">
+<meta name="theme-color" content="#FAF7F0">
+<script>
+  // Wcześniej niż CSS — zapobiega FOUC przy reload (cache theme z localStorage)
+  (function () {
+    var t = localStorage.getItem('dario.tasks.theme') || 'light';
+    document.documentElement.setAttribute('data-theme', t);
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', t === 'light' ? '#FAF7F0' : '#1A1208');
+  })();
+</script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Zadania">
@@ -16,7 +24,10 @@
 <body>
 
 <header class="topbar">
-  <h1>Zadania <span class="hl">Dario</span></h1>
+  <div class="topbar-row">
+    <h1>Zadania <span class="hl">Dario</span></h1>
+    <button id="theme-toggle" class="theme-btn" aria-label="Przełącz tryb">🌙</button>
+  </div>
   <div class="stats">
     <span id="stat-todo">0</span> do zrobienia ·
     <span id="stat-doing">0</span> w toku ·
@@ -59,12 +70,12 @@
       <button class="chip" data-cat="Osobiste">Osobiste</button>
     </div>
     <div class="filter-row" id="filter-status">
-      <button class="chip active" data-status="ACTIVE">Aktywne</button>
-      <button class="chip" data-status="todo">Do zrobienia</button>
-      <button class="chip" data-status="doing">W toku</button>
-      <button class="chip" data-status="idea">Pomysły</button>
-      <button class="chip" data-status="ARCHIVE">Zrobione</button>
-      <button class="chip" data-status="abandoned">Porzucone</button>
+      <button class="chip active" data-status="ACTIVE">Aktywne <span class="chip-count" data-count="ACTIVE">0</span></button>
+      <button class="chip" data-status="todo">Do zrobienia <span class="chip-count" data-count="todo">0</span></button>
+      <button class="chip" data-status="doing">W toku <span class="chip-count" data-count="doing">0</span></button>
+      <button class="chip" data-status="idea">Pomysły <span class="chip-count" data-count="idea">0</span></button>
+      <button class="chip done-chip" data-status="ARCHIVE">✓ Zrealizowane <span class="chip-count" data-count="done">0</span></button>
+      <button class="chip" data-status="abandoned">Porzucone <span class="chip-count" data-count="abandoned">0</span></button>
     </div>
     <div class="filter-row" id="filter-subcat" style="display:none">
       <!-- Wypełniane dynamicznie po wyborze kategorii -->
@@ -104,6 +115,11 @@
     <button class="del-btn" aria-label="Usuń">✕</button>
   </li>
 </template>
+
+<div id="toast" class="toast" role="status" aria-live="polite" hidden>
+  <span id="toast-msg"></span>
+  <button id="toast-undo" class="toast-undo">Cofnij</button>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script src="config.js"></script>

@@ -132,22 +132,58 @@
     const t = state.tasks.find(x => x.id === id);
     if (!t) return;
     const nextStatus = STATUS_NEXT[t.status] || 'todo';
+    const labelNext = STATUS_LABEL[nextStatus] || nextStatus;
+
+    if (!confirm('Oznaczyć jako: ' + labelNext + '?\n\n„' + t.name.substring(0, 80) + (t.name.length > 80 ? '…' : '') + '"')) {
+      return;
+    }
+
     const prevStatus = t.status;
-    t.status = nextStatus;
-    if (nextStatus === 'done') t.done_at = new Date().toISOString();
+    await applyStatus(t, nextStatus);
+    showUndoToast(t, prevStatus, labelNext);
+  }
+
+  async function applyStatus(t, status) {
+    const prevDoneAt = t.done_at;
+    t.status = status;
+    if (status === 'done') t.done_at = new Date().toISOString();
+    else if (status !== 'done' && prevDoneAt) t.done_at = null;
     render();
     saveCache();
 
-    if (!supabase || String(id).startsWith('temp-')) return;
+    if (!supabase || String(t.id).startsWith('temp-')) return;
     const { error } = await supabase
       .from(TABLE)
-      .update({ status: nextStatus })
-      .eq('id', id);
+      .update({ status: status })
+      .eq('id', t.id);
     if (error) {
       console.error('Update error', error);
-      t.status = prevStatus;
-      render();
     }
+  }
+
+  let undoTimer = null;
+  function showUndoToast(task, prevStatus, labelDone) {
+    const toast = document.getElementById('toast');
+    const msg = document.getElementById('toast-msg');
+    const btn = document.getElementById('toast-undo');
+    if (!toast || !msg || !btn) return;
+
+    msg.textContent = labelDone;
+    toast.hidden = false;
+    requestAnimationFrame(() => toast.classList.add('show'));
+
+    clearTimeout(undoTimer);
+    const hide = () => {
+      toast.classList.remove('show');
+      setTimeout(() => { toast.hidden = true; }, 250);
+    };
+    undoTimer = setTimeout(hide, 5000);
+
+    btn.onclick = async () => {
+      clearTimeout(undoTimer);
+      hide();
+      await applyStatus(task, prevStatus);
+    };
   }
 
   async function deleteTask(id) {
@@ -217,9 +253,19 @@
     const todo = state.tasks.filter(t => t.status === 'todo').length;
     const doing = state.tasks.filter(t => t.status === 'doing').length;
     const done = state.tasks.filter(t => t.status === 'done').length;
+    const idea = state.tasks.filter(t => t.status === 'idea').length;
+    const abandoned = state.tasks.filter(t => t.status === 'abandoned').length;
+    const active = state.tasks.filter(t => t.status === 'todo' || t.status === 'doing').length;
+
     document.getElementById('stat-todo').textContent = todo;
     document.getElementById('stat-doing').textContent = doing;
     document.getElementById('stat-done').textContent = done;
+
+    const counts = { ACTIVE: active, todo, doing, done, idea, abandoned };
+    document.querySelectorAll('.chip-count').forEach(el => {
+      const k = el.dataset.count;
+      if (counts[k] != null) el.textContent = counts[k];
+    });
   }
 
   function renderSubcats() {
@@ -363,6 +409,27 @@
     });
   }
 
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('dario.tasks.theme', theme);
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'light' ? '#FAF7F0' : '#1A1208');
+    const btn = document.getElementById('theme-toggle');
+    if (btn) btn.textContent = theme === 'light' ? '🌙' : '☀️';
+  }
+
+  function bindTheme() {
+    const current = localStorage.getItem('dario.tasks.theme') || 'light';
+    applyTheme(current);
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const cur = document.documentElement.getAttribute('data-theme') || 'light';
+        applyTheme(cur === 'light' ? 'dark' : 'light');
+      });
+    }
+  }
+
   function bindFooter() {
     document.getElementById('refresh-data').addEventListener('click', fetchAll);
 
@@ -408,6 +475,7 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     loadCache();
+    bindTheme();
     bindForm();
     bindFilters();
     bindFooter();

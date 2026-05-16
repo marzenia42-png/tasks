@@ -16,6 +16,28 @@
   --doing: #4A8FB8;
   --done: #6B6055;
   --shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --overlay: rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="light"] {
+  --bg: #FAF7F0;
+  --bg-2: #F2EDE0;
+  --bg-3: #FFFFFF;
+  --card: #FFFFFF;
+  --border: #E0D5BE;
+  --text: #2A1C0A;
+  --text-dim: #5B4D33;
+  --text-mute: #8A7858;
+  --gold: #8B7448;
+  --gold-bright: #6E5A38;
+  --gold-dark: #C9A96E;
+  --urgent: #B83A2D;
+  --important: #B88B1E;
+  --normal: #4F7A3F;
+  --doing: #2A6E94;
+  --done: #8A7858;
+  --shadow: 0 2px 12px rgba(60, 40, 20, 0.08);
+  --overlay: rgba(0, 0, 0, 0.4);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -382,6 +404,132 @@ select {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+/* Topbar row z toggle */
+.topbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.theme-btn {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  color: var(--gold);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.15s;
+  touch-action: manipulation;
+  font-family: inherit;
+}
+.theme-btn:hover { border-color: var(--gold); }
+.theme-btn:active { transform: scale(0.92); }
+
+/* Chip count badge */
+.chip-count {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 1px 7px;
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 999px;
+  min-width: 18px;
+  text-align: center;
+  vertical-align: 1px;
+}
+.chip.active .chip-count {
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--bg);
+}
+html[data-theme="light"] .chip-count {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--text-dim);
+}
+html[data-theme="light"] .chip.active .chip-count {
+  background: rgba(255, 255, 255, 0.35);
+  color: var(--bg-3);
+}
+
+/* "Zrealizowane" chip wyróżnione */
+.chip.done-chip {
+  border-color: var(--gold-dark);
+}
+.chip.done-chip.active {
+  background: var(--gold-dark);
+  border-color: var(--gold-dark);
+}
+
+/* Light mode dopracowanie kontrastu badge akcentów */
+html[data-theme="light"] .badge.prio.urgent {
+  background: rgba(184, 58, 45, 0.10);
+  color: var(--urgent);
+  border-color: rgba(184, 58, 45, 0.45);
+}
+html[data-theme="light"] .badge.prio.important {
+  background: rgba(184, 139, 30, 0.10);
+  color: var(--important);
+  border-color: rgba(184, 139, 30, 0.45);
+}
+html[data-theme="light"] .badge.prio.normal {
+  background: rgba(79, 122, 63, 0.10);
+  color: var(--normal);
+  border-color: rgba(79, 122, 63, 0.45);
+}
+html[data-theme="light"] .badge.subcat {
+  background: rgba(139, 116, 72, 0.08);
+  color: var(--text-dim);
+  border-color: var(--border);
+}
+
+/* Toast undo */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(80px + env(safe-area-inset-bottom));
+  transform: translateX(-50%) translateY(20px);
+  background: var(--bg-3);
+  color: var(--text);
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow);
+  z-index: 100;
+  font-size: 14px;
+  min-width: 260px;
+  max-width: 90vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.toast-undo {
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  touch-action: manipulation;
+}
+.toast-undo:hover { background: var(--gold-bright); }
+.toast-undo:active { transform: scale(0.95); }
 
 @media (max-width: 480px) {
   .topbar h1 { font-size: 19px; }

@@ -1,4 +1,4 @@
-const CACHE = 'zadania-dario-v2-supabase';
+const CACHE = 'zadania-dario-v3-light-undo';
 const ASSETS = [
   './',
   './index.html',
