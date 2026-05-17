@@ -1,7 +1,8 @@
-const CACHE = 'zadania-dario-v5-area-edit-fab';
+const CACHE = 'zadania-dario-v6-glossy-waiting-ankieta';
 const ASSETS = [
   './',
   './index.html',
+  './ankieta.html',
   './style.css',
   './app.js',
   './config.js',

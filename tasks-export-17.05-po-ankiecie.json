@@ -1,0 +1,2626 @@
+﻿[
+    {
+        "id":  "072f6c1c-4413-48a0-b17d-4507da7007a5",
+        "title":  "3 mieszkania na wynajem (dochód pasywny)",
+        "area":  "finanse",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "436eec18-cc67-4420-b577-9ed3105bd707",
+        "title":  "6 pytań do Q\u0026A na webinarze — wysłane",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "1ecaa254-0103-4bc8-a1a7-417b4675211a",
+        "title":  "AI SEO plan dla DB Meble — 7 kroków, zapisany jako zadanie",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "89335465-852e-4e89-a3b2-13b42cc528b7",
+        "title":  "Australijski Kangur 1oz 2026 — zamówiony przez Beatę (para z Wiener)",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "0c10b026-dafd-4f0d-9691-78857876c91a",
+        "title":  "Całe BTC+ETH przeniesione na Ledger",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "cd1e329e-37b2-453f-9186-67cc8fdd5125",
+        "title":  "DCA Maj 2026 — BTC 500 PLN + ETH 300 PLN na Binance",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "e266527d-63c7-46a7-bc79-5c032545c2f1",
+        "title":  "Excel portfel inwestycyjny — zbudowany (5 arkuszy)",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "8f76f483-aff0-45cb-befa-cb45436e36d6",
+        "title":  "Freedom24 — +20 szt U3O8.EU + 2 szt VUAA.EU",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "aff14f34-7f73-4828-a9a1-4fec28793256",
+        "title":  "Freedom24 — analiza portfela",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "779b28db-3a0f-4b2c-89c3-156f97cb75f1",
+        "title":  "Kraken — konto gotowe",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "de6a06c7-5725-4142-b962-e33445da1b5a",
+        "title":  "Ledger Nano X — PIN, seed24, firmware v2.2.3, BTC+ETH apps, test OK",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "0b0aa710-3285-461f-87ed-b68e1644a14b",
+        "title":  "Plan inwestycyjny 2026–2035 — prezentacja PPTX na Drive",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "60d59ac4-2018-4be8-805c-cc619927473f",
+        "title":  "Prezentacja `Inwestycje_Rodzina_2026.pptx` (8 slajdów)",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "aaa32019-7cc1-420a-818e-1517d4750617",
+        "title":  "Saxo Bank przez Pawła — opcja do ewentualnego powrotu",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "d04d263f-fcf0-44b4-ad98-597126d5f1aa",
+        "title":  "SMR — Small Modular Reactors (NuScale, X-energy, Oklo, TerraPower); omówić z Pawłem; sprawdzić czy Saxo daje dostęp",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "875c17f5-7439-489a-a51e-89b2a79f8e7a",
+        "title":  "SMR spółki — temat do przyszłości (po opanowaniu U3O8/URNM)",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "48f2954c-4576-4fd8-8818-6d99145bda91",
+        "title":  "Srebrne monety — `mennicaskarbowa.pl` lub `goldenmark.com`",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "fd302042-e0a0-4bd1-85b1-4060a05009f5",
+        "title":  "Webinar IK Pawła Szpakowicza \"AI i rynki finansowe\"",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "b01d495a-49d3-4e06-a33e-dfcfaa0ff0fc",
+        "title":  "Wiener Philharmoniker 1oz — kupiony (~17 200 PLN)",
+        "area":  "finanse",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "4c5547ed-6f17-4f5c-a6eb-326882307058",
+        "title":  "Freedom24 — zmiana konta na EUR",
+        "area":  "finanse",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "d0ecd894-8b53-4ab9-926c-6f37bd0af026",
+        "title":  "Freedom24 — zmienić konto rozliczeniowe na EUR (nie PLN) — oszczędność na spreadzie",
+        "area":  "finanse",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "12f00388-7742-4f33-b252-9ff38d481433",
+        "title":  "Kolejne zakupy Freedom24 = TYLKO VUAA (cel 70–80% portfela; aktualnie tylko 3 szt.)",
+        "area":  "finanse",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "da534ca3-4b13-48c8-bafa-2db8296e5aad",
+        "title":  "Kraken — zasilić po przyjeździe karty Revolut (~7–12.05)",
+        "area":  "finanse",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "33042134-d91b-4428-86cf-8e1144d9fb52",
+        "title":  "Pilnuj terminu pozycji spekulacyjnej DGT4045.MAY27 (platyna, 300$, +25.74%)",
+        "area":  "finanse",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "4623dbab-dc94-49c0-b464-d1adf210fc9f",
+        "title":  "Saxo Bank — dokończyć KYC (selfie + dokument przy świetle dziennym)",
+        "area":  "finanse",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "INWESTYCJE"
+    },
+    {
+        "id":  "8297cd8b-c267-42c5-9ca1-a942d3020e8b",
+        "title":  "Angielski (input + shadowing)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "d08a494e-1994-4a7d-81c1-ffa0b421a68f",
+        "title":  "Angielski B1→C1 — 30 min dziennie (Luke\u0027s English + BBC)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "NAUKA"
+    },
+    {
+        "id":  "a2e478d5-923e-4b48-b072-6f54c295e060",
+        "title":  "Angielski C1",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "NAUKA"
+    },
+    {
+        "id":  "19cc985a-47f3-417e-a20d-2004a16a49d8",
+        "title":  "Dachówki ogród — naprawić (1 narożna rozbita, 1 pęknięta)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "b7872b1c-5533-40fc-9991-969fbaef713b",
+        "title":  "Dom w Portugalii",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "c901de89-6896-4277-a017-edc43e1db690",
+        "title":  "Dr Górski — prywatność / bezpieczeństwo (aktywny, NIEZACZĘTY 🚨)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "NAUKA"
+    },
+    {
+        "id":  "615f9916-cb02-4434-9fc7-0b6849017b58",
+        "title":  "Format: rotacja tematów — pn/inwestycje, wt/angielski, śr/AI, czw/zdrowie, pt/relacje. Ustalić 3 obszary priorytetowe",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "db31c6d1-eccc-4bf7-82cb-c6dfc757cd84",
+        "title":  "Garmin Fenix 8 Pro AMOLED ~6k PLN LUB Suunto Vertical 2 Titanium ~3.5k PLN",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "SPRZĘT"
+    },
+    {
+        "id":  "4769feb4-90df-4997-b9c0-d9ea38c110fa",
+        "title":  "Hipnoza i sen (audio, podświadomość)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "0ac3d38f-a333-43ac-a136-c53cfe66805b",
+        "title":  "Inwestowanie — esencja 50 najlepszych książek (Dalio, Buffett, Graham…)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "0a8f9a7e-db6f-4aa4-aba0-a1e381a136b4",
+        "title":  "Kajaki PL · Narty + snowboard · Tenis · Kurs tańca (rodzina) · Kurs pływania (rodzina)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "HOBBY"
+    },
+    {
+        "id":  "3994c013-48e8-4f7c-8740-44be4bbd5af3",
+        "title":  "Kegel i dno miednicy (protokół 42+)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "eb8c788d-c4eb-4c72-bbe9-84f7a96107ea",
+        "title":  "Kolaż tablicy marzeń — poprawić (3 duże + mniejsze, bez uciętych)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "c3119d06-e65e-4dff-9bc2-1253cc2f0be6",
+        "title":  "Książki — lista do przeczytania (BETI pilnuje!)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "NAUKA"
+    },
+    {
+        "id":  "29f35fb8-6167-40e5-be3b-7ea87f856a45",
+        "title":  "Kurs Pawła Szpakowicza — surowce / uran (aktywny)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "NAUKA"
+    },
+    {
+        "id":  "8eaecf3e-cc0d-4107-8be5-234986f76eb5",
+        "title":  "Mąż / kochanek / ojciec (Gottman, Chapman, Perel, Biddulph)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "c982000f-48d1-48b6-a0be-e47f2c92c944",
+        "title":  "Nauka szybkiego czytania",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "NAUKA"
+    },
+    {
+        "id":  "0edfda60-cd8f-4fa0-acf0-e824f5bd8ae9",
+        "title":  "Nawyki i psychologia (Covey, Clear, Frankl, Carnegie)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "8f834ee6-f8d6-4bf7-b4de-923c8c72a0a4",
+        "title":  "Ogrodnictwo (nawożenie, mszyce, grzyby, mącznik)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "66b1a244-244c-4c1b-a957-ad8b61a4fda3",
+        "title":  "Pędy sosny i pyłek (zbiór, właściwości, afrodyzjak)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "81ee7947-25e3-4793-aeda-c85048b11fec",
+        "title":  "Pixel 9 Pro XL 256GB ~5k PLN",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "SPRZĘT"
+    },
+    {
+        "id":  "2c5f356d-a07d-41d6-891c-6cd750ba591f",
+        "title":  "Portugalski + Chiński (rozważa)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "NAUKA"
+    },
+    {
+        "id":  "6d9a36a8-e118-4613-9b36-b09a4541ba54",
+        "title":  "Quad + konsola na OLX — nikt nie dzwoni, poprawić ogłoszenie",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "909cdf31-2948-449f-acff-7a72268d8644",
+        "title":  "Szybkie czytanie i pamięć (Buzan, Foer)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "a9b5d623-1c66-425a-9068-45e9e078b945",
+        "title":  "ThinkPad X1 Carbon Gen13 OLED 32GB ~12k PLN",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "SPRZĘT"
+    },
+    {
+        "id":  "0965b3f8-8a14-4fdf-a0db-ea8415823ae2",
+        "title":  "Układ w ogrodzie — niszczeje, coś zrobić",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "ba31c4e0-9cf3-48ed-9a0d-27f002e9f44d",
+        "title":  "Viessmann Vitodens 100 — obniżyć z 55°C do 35–40°C dla podłogówki",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "2e01e862-0222-41b2-b82a-c50bc770ce4a",
+        "title":  "Webinar Claude AI (KCBSI)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "NAUKA"
+    },
+    {
+        "id":  "a348a1f5-8a07-466e-a195-def4e78b7ea9",
+        "title":  "Własna łódka + patent",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "6766a83c-c011-44d3-834c-ca4cc2eb0dd1",
+        "title":  "Zachowanie młodości (longevity, NAD+, hormony)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "a2b29857-bf7b-4b9f-b034-6b50d8ac939e",
+        "title":  "Zdrowie i długowieczność (Attia, Huberman, Walker, Sinclair)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "LEKCJE"
+    },
+    {
+        "id":  "3481c960-62d6-46d5-a2d1-0aaa825da30e",
+        "title":  "Zehnder ComfoAir Q — razem z Dario przejść przez ustawienia rekuperacji",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "a11440d0-8692-4c42-84f5-c7dd0d756566",
+        "title":  "Ziemia w Gierach (po tacie)",
+        "area":  "hobby",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "9ada57d3-d328-4cc2-a24c-88ffe307cb5e",
+        "title":  "Aplikacja słówek angielskich (zbudowana wcześniej — czy używana?)",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "NAUKA"
+    },
+    {
+        "id":  "e2dec66a-4517-4565-96a7-f9a8c5f517c9",
+        "title":  "Brave — zainstalowany na laptopie + telefonie",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SPRZĘT"
+    },
+    {
+        "id":  "d29b5034-cb01-4801-bd80-61eb45653f00",
+        "title":  "DARIODOIT → GitHub Pages (rutyny + kalendarz + zadania) — częściowo zrealizowane jako DARIO 3.0",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "66166a1a-4be3-4f4b-af16-94ceef9f80e7",
+        "title":  "Domek saunowy + ziemianka — koncepcja dwupoziomowa (sauna góra + pomieszczenia w skarpie 3m)",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "bcd6bfe3-6dda-435e-aac1-d59ff29667bd",
+        "title":  "Garden Space — projekt ZAWIESZONY (nie wracamy bez wyraźnej decyzji)",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "83c4f061-891c-40b5-947a-a4821e9f28af",
+        "title":  "Kawa EcoBlik Peru — ocena dobra (160 PLN/kg uczciwa cena, metoda wodna)",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "430f0a01-b3b5-4231-8715-44147b2c5afb",
+        "title":  "Kolaż tablicy marzeń (z Artlist — zdjęcia wgrane)",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "c2540c34-0f68-4225-81a2-c7110e0f3738",
+        "title":  "Książka kucharska dla siebie — zebrać przepisy",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "b1ce02cc-b72d-4b5d-a487-c42b4369e724",
+        "title":  "Lista zegarków: Garmin Fenix 8 Pro AMOLED LUB Suunto Vertical 2 Titanium",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SPRZĘT"
+    },
+    {
+        "id":  "cf472e82-f5ec-444a-ad4c-9705b325914b",
+        "title":  "Lucky 11 kg — karmić wolniej (rozważa zmianę miski / rytmu)",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "c8a62e61-6cee-4583-9797-5ea865d9629c",
+        "title":  "Pergola ogrodowa — 2 zdjęcia (różowe róże + ławka)",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "2c7847ba-ef0e-4ea2-b277-b13ccbb15d36",
+        "title":  "Przewodnik zakupowy PDF — ThinkPad X1 Carbon + Dell Precision + Pixel 9 Pro XL (`Zakupy_Dario_2026.pdf` + `_Light.pdf`)",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SPRZĘT"
+    },
+    {
+        "id":  "b762c569-3e6a-4649-83fd-5089f8bf6622",
+        "title":  "Przykręcić obrazek (śrubki) — zrobione lub przedawnione",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "3eea57ab-737d-4e13-ad3a-2d64fb62a21d",
+        "title":  "Schody ogrodowe — inspiracje + schemat budowy (belki + żwir + pale stalowe)",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "312b6c1e-c731-4a86-aa0a-842cd5d76075",
+        "title":  "Tablica marzeń PDF — 3 wersje + kolaż v5",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "3afb019d-a413-4fc4-8872-118eae08f3fb",
+        "title":  "WebToLearn — kursy odrzucone (Dario nie chce ich kupować)",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "NAUKA"
+    },
+    {
+        "id":  "e4b3761e-ae8c-4b0c-becb-8262807676d7",
+        "title":  "Wysłać screen z MCK do Beaty — zrobione lub przedawnione",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "c77a6dce-7d39-425c-b2d7-6725890743bc",
+        "title":  "Zakupy planowane do gabinetu (biurko elektryczne, mata akupresury, stepper) — przełożone (status nieznany)",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "9b0c2098-c5f7-4e11-9788-71c8607ff2c2",
+        "title":  "Zehnder ComfoAir Q — instrukcja opanowana",
+        "area":  "hobby",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "DOM"
+    },
+    {
+        "id":  "0bbf5a18-162d-42c1-bb31-c8ea8fcb8d3f",
+        "title":  "Webinar Gemini KCBSI godz. 20:00",
+        "area":  "hobby",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "NAUKA"
+    },
+    {
+        "id":  "c72538fb-8704-4646-a6e8-fe5697a36d5b",
+        "title":  "Claude Max — kupić na claude.ai (Partner Meble NIP 937-238-49-87)",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "42bcbee6-6af3-4d08-a144-15e6fd35605d",
+        "title":  "Dostawa MARO ZS2603026, ul. Podbipięty 29A Kraków",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "34e62c81-2175-4a77-818a-bdf09eb6cb6f",
+        "title":  "Exit BTC (tygodnie 140–145 od ATH)",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "545ede45-225f-4928-a3c5-04790202c112",
+        "title":  "Kuba — urodziny",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "612aa982-f902-43ef-817f-602287d929ef",
+        "title":  "lub cywilny USC Myślenice",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "202d8cb0-4e02-4066-85a1-e02d7a6f301a",
+        "title":  "Marcel — urodziny",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "245230c1-51ea-4f81-9612-9aa14476a5e3",
+        "title":  "Pogrzeb Kraków godz. 11:00",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "2e6fa8c7-5dd6-4284-bce2-dd6907cdabe6",
+        "title":  "Posty DB FB+IG + ustawienia email Meta i LinkedIn",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "64827f2e-5a19-4e95-97be-2e397e8dfd29",
+        "title":  "Przypomnienie #1 ślub",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "1e6fab71-9700-40fb-aa70-48dfaf50fea6",
+        "title":  "Przypomnienie #1 urodziny Beaty",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "e5ec12e2-40c8-42a7-8a1f-f5dbed917fcb",
+        "title":  "Przypomnienie #2 ślub",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "ca7a16f7-659a-4cf5-94c3-e46baacd83a0",
+        "title":  "Przypomnienie #2 urodziny Beaty",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "cf4f649f-8284-4f48-aed3-77c3d11c5ce7",
+        "title":  "Przypomnienie urodzin Marcel + Kuba",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "a4a277ed-5f59-4324-85d9-71589f5d8cc6",
+        "title":  "Tajlandia, Wietnam, Nowa Zelandia, Afryka, Argentyna, Kolumbia, Chile, Monte Carlo, Paryż, Ameryki",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "PODRÓŻE"
+    },
+    {
+        "id":  "5b2b7189-d065-4e40-8d69-54ce48204641",
+        "title":  "Trening C — NOGI (martwy ciąg + RDL)",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "fdea038b-ebfa-4a22-939d-23fa00611d81",
+        "title":  "Urodziny Beaty (wymyślić wyjątkowy prezent — uwzględnić Hashimoto)",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "095b1b65-dcbf-471c-bef4-d8ae3f24c4a3",
+        "title":  "Webinar Claude AI KCBSI godz. 20:00",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "b5c4e66a-53cd-4cab-a340-b9430c172165",
+        "title":  "Webinar Gemini KCBSI godz. 20:00",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "19a6ee60-7d01-453e-ad6b-850cf1745617",
+        "title":  "Wizyta kontrolna Beaty godz. 7:00",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "155152fc-c3e2-4799-8157-eee5c1edde5c",
+        "title":  "Wspólna impreza Marcel + Kuba",
+        "area":  "marzenia",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DATA"
+    },
+    {
+        "id":  "995df7b2-c35f-4596-8c39-0d60e2a6992f",
+        "title":  "Artlist AI — logo SOLA + Partner Meble (kredyty 300 → 0)",
+        "area":  "marzenia",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "PERSONAL BRAND"
+    },
+    {
+        "id":  "fbc5bf87-9c3c-4c67-901f-1958d2604408",
+        "title":  "Zdjęcie personal brand: Dario + Porsche 911 + Lucky + czapka z logo + Portugalia (Artlist)",
+        "area":  "marzenia",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "PERSONAL BRAND"
+    },
+    {
+        "id":  "f467a78a-e0c6-4ee1-a110-9c68e1f15ef1",
+        "title":  "\"Kraków\" w tagu tytułowym homepage — brakuje",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "a42fb273-2483-4cb8-8724-ef9a08b3cba1",
+        "title":  "1 mln PLN wolnych środków",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "BIZNES"
+    },
+    {
+        "id":  "0c83475b-284b-43a8-86ea-3df2e85561a8",
+        "title":  "Agent analizy stron www (planowany)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "cafcd4fa-c1cb-47d1-9cc0-764c543d45d1",
+        "title":  "Agent Budowy biurowe → Telegram (e-budownictwo.gov.pl, BIP, otodom, PropertyNews; biurowce ≥500m²)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "4f6477d1-fe94-415d-b5ca-9a5af889753e",
+        "title":  "Agent DXF — szkic pomieszczenia → plik do pcon.planner",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "733cd1e0-43ef-490b-b38f-0962d56e1839",
+        "title":  "Agent Garmin",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "abandoned",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "097bfa9d-3ba9-4701-8675-4910bdef2722",
+        "title":  "Agent notatek głosowych → zadania (rozszerzenie Agent Notatek)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "0e7d1842-e8ec-400b-8ceb-92cee7b73135",
+        "title":  "Agent Oferteo — proste zapytania B2B (NIE przetargi publiczne)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "29942c4f-5569-4db9-9a4a-55d71400fc63",
+        "title":  "Agent strony DB Meble — auto-aktualizacja produktów (scrap od producentów)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "a666cc6b-7142-4ca0-a592-71e5280bef30",
+        "title":  "Agent Time — codzienne przypomnienia Telegram (suplementy, zadania, Freedom24)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "f02461e7-656e-4891-8781-d17fac7adc49",
+        "title":  "Agent Treści WP (pomysł / planowany)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "8c2e277f-5827-43a5-9cf0-72337b2560f7",
+        "title":  "AI SEO wdrożenie — FAQ, Google Business, artykuły (7 kroków zapisane 05.05)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "0dba9ae4-84aa-42f2-af8e-f6ee8b71708d",
+        "title":  "beti-optimizer v2 — auto-sync skilli, monitoring producentów",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "4b8dc074-a864-41fb-9abc-72d2609c04c7",
+        "title":  "Biuro 80–150 m² — szukać (Libertów → Myślenice)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BIURO"
+    },
+    {
+        "id":  "d112573b-e20c-4834-b950-d70616288e09",
+        "title":  "Blog miesięczny (1 artykuł / mies.) — wznowić",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "94f8cac3-6b4c-42f9-97a6-d4a04faf7bd2",
+        "title":  "Brakujące produkty Maro: Eleganza, Febo, SitiQ, Ixu, S50, Texo, L-Line E",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "57e4c782-078c-45ef-9856-db76350742a6",
+        "title":  "Brakujące produkty MDD: Linka, Echo, Iris, Neo, Bolt, Ogi Drive",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "8f246087-b4ee-4077-b70a-86791a15fb4c",
+        "title":  "Brakujące produkty Profim: Xenon SL/SFL, Revo, Decenta",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "248e5c68-fd49-4c62-968f-b5f4dbb689b5",
+        "title":  "Brief strony (co pokazywać, kto klientem) — 30 min z BETI",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB CONCEPT"
+    },
+    {
+        "id":  "bd47c553-e78d-447f-977a-fe25ae6d4a17",
+        "title":  "DiceBear avatary",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "waiting",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "a2a66572-5025-4d50-aab7-eb5ca4a2603c",
+        "title":  "FAQ na stronie — dodać",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "7cf08471-06f2-492f-81e2-482968bc8d98",
+        "title":  "Feedback wizualny z laptopa po obejrzeniu prototypu (`dbconceptspace.html`)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB CONCEPT"
+    },
+    {
+        "id":  "0b369d2e-07f9-4296-bbc4-1875f29307fe",
+        "title":  "Fotoksiążka z historią pracy z BETI — \"od zera do bohatera\"",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "903fb1e0-f91e-407e-899d-945a73e1435a",
+        "title":  "GitHub Pages — DARIO OS lista zadań",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "SYSTEM"
+    },
+    {
+        "id":  "03d87ed6-0217-4593-9eff-d62b43af1aad",
+        "title":  "Google Calendar / Google Fit / Apple Health / Garmin Phase 1",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "waiting",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "ad479e8b-eb6c-4ea1-9b16-5afcc8633972",
+        "title":  "ING — nowe konto firmowe (lepsza oferta niż obecny)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "abandoned",
+        "subcategory":  "BANK"
+    },
+    {
+        "id":  "3bc46844-183f-4595-b040-8bfb5d94feb3",
+        "title":  "JDG → sp. z o.o. — termin ostateczny",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "SPÓŁKA"
+    },
+    {
+        "id":  "d86b90fc-c528-49d4-9f1c-4c085c8aa9c7",
+        "title":  "Landing page",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "waiting",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "123b4bd3-896a-48e0-b9ec-b877c2eb10ee",
+        "title":  "Lista klientów z historycznych ofert → baza danych",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "f94c7c3a-c1d6-4038-b36b-1cc779ccfd08",
+        "title":  "Lista mailingowa firm (Apify) — wysyłka prezentacji",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "7db65339-a256-48a6-a1fa-d49b93bc8727",
+        "title":  "Logo — prompty Midjourney gotowe (`LOGO_PROMPTY_MIDJOURNEY` na Drive)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "abandoned",
+        "subcategory":  "PARTNER MEBLE"
+    },
+    {
+        "id":  "d84abc8a-41b0-4c75-b962-7654caeab361",
+        "title":  "Logotypy spółek — komplet (DB Meble / Partner Meble / SOLA LIFE)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BRAND"
+    },
+    {
+        "id":  "a0e9616d-63c6-49bd-ad3b-41afdf2be0f1",
+        "title":  "Lovable payments — bramka płatności (nowa funkcja od 01.05.2026)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "ecad8d4d-b62d-4666-99ac-8c39cd65e0b3",
+        "title":  "LYRA — historia konwersacji w Supabase",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "abandoned",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "1143cfa8-e98a-4aa3-8f9a-06834a67e7dc",
+        "title":  "MASTER LISTA ZADAŃ — aktualizować po każdej sesji!",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "f916ae1f-beb4-4ec8-95d8-035b378c8a30",
+        "title":  "Materiały z komputera → Drive (ceny, katalogi, wyceny, oferty historyczne)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "ADMIN"
+    },
+    {
+        "id":  "1a80f6c7-2e8a-41d4-bf8c-b8565179c0fe",
+        "title":  "Nawigacja dolna SVG icons",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "abandoned",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "0029585b-2b70-48db-b321-15e12e377fca",
+        "title":  "Nowa strona premium (benchmark Vitra) — Webflow lub Lovable",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "DB CONCEPT"
+    },
+    {
+        "id":  "2a91d19a-f3a5-4b8e-bfbe-0a1ea66d8331",
+        "title":  "Obie strony — ten sam szablon, klient może się gubić — różnicowanie",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "fcd4639a-cfaa-4c5f-96c9-7a42ac0230ce",
+        "title":  "OLX Monitor (planowany)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "ef456767-4258-4bfa-9c3c-0972e5977dd8",
+        "title":  "Onboarding animacja",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "waiting",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "1104c04b-38ba-4d98-865c-c6e19b8245ac",
+        "title":  "Opinie / social proof na homepage — dodać (liczby + opinie)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "3ef2a8cb-c11e-46e2-906f-950652dfcb11",
+        "title":  "Partner Meble — brak Bejot, Flokk, Narbutas w logotypach — uzupełnić",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "PARTNER MEBLE"
+    },
+    {
+        "id":  "c81b50da-f788-43a6-bee2-756ca188a117",
+        "title":  "Partner Meble — realizacje 2013–2018 są krytycznie stare — odświeżyć",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "PARTNER MEBLE"
+    },
+    {
+        "id":  "d7bce312-8d2d-4683-b4d0-e3605fdd01bb",
+        "title":  "Posty DB Meble — czwartek 08.05 (FB/IG) + piątek 09.05 (LinkedIn)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "abandoned",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "18c928f7-60f7-4958-be66-47a4b8caa6b3",
+        "title":  "Prezentacja dla architektów",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "67f36577-cd15-48b4-8147-67774320d87b",
+        "title":  "Prezentacja dla instytucji państwowych",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "14c87a92-ebab-4fbe-9a5a-d91361bf24c1",
+        "title":  "Produkty i oferta",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "PARTNER MEBLE"
+    },
+    {
+        "id":  "9a198bc2-3f52-4cb7-a392-23798174374b",
+        "title":  "Przeprowadzka mebli — nowy lokal Myślenice",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BIURO"
+    },
+    {
+        "id":  "03a3e273-8756-4021-8e06-e6948cf8b690",
+        "title":  "Push notifications",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "waiting",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "eadfd831-ad90-4947-849e-694a8638ab35",
+        "title":  "Realizacje jako osobne podstrony (top priorytet SEO; min. 3)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "fb195e75-22e7-4c4c-8694-610415faee79",
+        "title":  "Rozszerzenie Agenta Notatek o automatyczne kategoryzowanie",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "2e5dbde8-719c-4ea3-8d9f-754875be296e",
+        "title":  "SEO od podstaw",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "abandoned",
+        "subcategory":  "PARTNER MEBLE"
+    },
+    {
+        "id":  "462f1b5e-ac5f-436d-964d-bc7ef25d5fcf",
+        "title":  "Sesja Claude Code — minimum 90 min, tylko SOLA",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "05459ea2-5ade-47f9-96a9-fd20d326394f",
+        "title":  "Skille sync: Code → Drive → Project Knowledge (po każdym audycie)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "SYSTEM"
+    },
+    {
+        "id":  "1377192b-88c9-488e-b4a9-c39ef53df026",
+        "title":  "SOLA = pasywny dochód globalny",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "e7024000-52ee-4e20-b2c8-cf653bc726dc",
+        "title":  "SOLA Kids — nakładka SOLA dla dzieci (wiek? osobna apl. czy nakładka? family plan?)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "idea",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "1bbd3057-40a2-44ad-91bf-63385bc4e7ff",
+        "title":  "SOLA LIFE sp. z o.o. — założenie",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "6f1c1ea6-40ca-4dd9-b238-6d1bc4b21067",
+        "title":  "Splash minimalistyczny + zdjęcia obszarów",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "0538c4ed-7024-4f8d-ac57-5325a02c0058",
+        "title":  "Stripe integration (po założeniu spółki)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "waiting",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "86b80075-a2c5-4320-b413-668fe7e74dd6",
+        "title":  "Strona partnermeble.pl — termin",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "PARTNER MEBLE"
+    },
+    {
+        "id":  "039bdb25-f65c-4d1a-b161-18eaaaba519d",
+        "title":  "Strona partnermeble.pl — zbudować od zera (Lovable)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "abandoned",
+        "subcategory":  "PARTNER MEBLE"
+    },
+    {
+        "id":  "45ca7439-afbc-44ea-a217-845bb0dc5cd8",
+        "title":  "Subskrypcje AI — przejrzeć co płacimy / co używamy (Lovable FV!)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "ADMIN"
+    },
+    {
+        "id":  "2c473c00-c904-49c4-97a4-b7af5b0c5816",
+        "title":  "Tel/Fax pusty w stopce dbmeble.pl — poprawić w WP",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "c91a8982-0d3d-422b-901f-e3e0971c3a86",
+        "title":  "Umowa B2B Dario↔Beata — faktury za pozycjonowanie / projekty / social",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "abandoned",
+        "subcategory":  "SPÓŁKA"
+    },
+    {
+        "id":  "5ec492c0-9fa5-4cd8-9924-d852974add21",
+        "title":  "Weekly summary",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "waiting",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "ba1c21ed-2095-4cb9-ba9d-d51524f104ff",
+        "title":  "www.partnermeble.pl — brak DNS redirect (niski priorytet, do naprawy przy budowaniu nowej strony w czerwcu)",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "waiting",
+        "subcategory":  "PARTNER MEBLE"
+    },
+    {
+        "id":  "2513596c-3176-498e-ac48-8456cd3136ab",
+        "title":  "Wybór platformy (Webflow vs Lovable) + projekt + budowa",
+        "area":  "praca",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "DB CONCEPT"
+    },
+    {
+        "id":  "c3d70ab6-769c-47cd-8fe2-1cb1da7f0362",
+        "title":  "\"Cisza w biurze\" — post",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "bb864bd4-085d-4194-bafb-9271672142de",
+        "title":  "`ANTHROPIC_API_KEY` dodany do Supabase Secrets",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "d0b18e77-2419-413e-9781-705821475c91",
+        "title":  "`beti-optimizer` SKILL v2.0 — Bio-OS struktura",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "7bb764eb-58ac-4da8-8e98-9703b2ee3c6a",
+        "title":  "`beti-potrzeby-SKILL-v1.md` → Project Knowledge",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "e833b30f-9daf-4c30-a273-07c5ece71efa",
+        "title":  "`db-ai-knowledge` SKILL v2.0 — Bio-OS struktura",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "8e64ba27-0bc8-4f75-a135-752d2f87296d",
+        "title":  "`db-social-post-SKILL-v10.md` zaktualizowany",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "1fb23845-8c4c-49ff-a288-0d77193b11fb",
+        "title":  "`gmail-protocol-SKILL-v1.md` → Project Knowledge",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "309658cc-28db-4585-95a3-948db50b193c",
+        "title":  "`kolejnosc-DNA-SKILL-v1.md` → Project Knowledge",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "13456287-7500-4223-b074-28ec596aeaae",
+        "title":  "`skill_beti_workflow.md` v1.1 (Zasada Jeden Krok)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "deadaabf-f5e5-4d1b-ba38-067874a409b6",
+        "title":  "4 skille jako artefakty: `db-concept-space-SKILL-v1`, `db-ai-knowledge-SKILL-v1`, `db-seo-SKILL-v1`, `db-lead-agent-SKILL-v1`",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "d569aa6f-86ba-4fcb-95ad-6bdf2af64895",
+        "title":  "4 skille zainstalowane: `dario-os`, `db-social-post`, `beti-system`, `prompt-optimizer`",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "51d60a5c-f60d-4115-a161-c2b04c28d0f4",
+        "title":  "9 skilli ulepszonych do v2/v3/v4 (Bio-OS struktura) — Drive + Project Knowledge",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "1343e6f3-2560-4401-b19b-174ba1da94ba",
+        "title":  "Agent Email DB — zbudowany (IMAP darek@dbmeble.pl → Claude Haiku)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "55f50b21-e254-48fc-a13c-d4d1efd26ef9",
+        "title":  "Agent Notatek — zbudowany (Drive → AssemblyAI → Claude Haiku → Drive)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "1eab5a9b-73d0-4858-9225-3cc38ec6ecd0",
+        "title":  "AI Act — wymogi dla SOLA",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "doing",
+        "subcategory":  "ALERT"
+    },
+    {
+        "id":  "2936f45a-7823-480a-b1be-7c6a6bf8db1e",
+        "title":  "Aplikacja do kosztów — blok ofert + blok zamówień (prywatne + firmowe)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "APP"
+    },
+    {
+        "id":  "f56061f3-f9a8-437f-8635-8e785956186c",
+        "title":  "AssemblyAI Voice Agent API (WebSocket) — potencjał dla SOLA/LYRA i Agenta Notatek",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "2b8dffc0-3c20-48a2-a5c3-cba232b9d872",
+        "title":  "Audyt dbmeble.pl + partnermeble.pl (lista zadań)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "518db18d-776f-44ac-a742-e22105e41371",
+        "title":  "Audyt pamięci BETI — skompresowana z 30 do 20 wpisów",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "3900d645-b50c-4ab4-b678-1522a0b4ced3",
+        "title":  "Baza wiedzy producentów skompletowana (Profim/Flokk, HAG, Bejot, Narbutas, MARO, MDD, NS, Kleiber, Wuteh, Antrax, Malow + trendy 2026 + plan postów 4 tyg.)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "9b1314ff-319e-4c16-bd42-8d71d1d382e9",
+        "title":  "Beczki Jim Beam 200L × 3 + połówki (~3000–4000 zł)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "be4aa742-f29d-4103-8537-fd9eb3165a96",
+        "title":  "BETI OS v3.0 zbudowany i zapisany na Drive",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "6be5f5af-05f4-4275-9a65-e082183ee261",
+        "title":  "Bloker #4 zamknięty — 3 commity (d179e52, 0b5fba8, f613267)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "6efff917-609f-43cb-8c02-4239b74dbfde",
+        "title":  "BottomNav — SVG ikony zamiast emoji",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "da4c5000-d95e-45dc-be6b-c211227aa0c8",
+        "title":  "Briefing poranny niekompletny → naprawione w pamięci",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "e6509d9a-0a04-4cc7-9d1b-02075809886b",
+        "title":  "Claudia Agent — webhook → Claude Haiku → Drive CLAUDIA (24/7)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "bae4b221-a951-4bfa-8010-4ce3009e7f61",
+        "title":  "Commity 7f5a0a6, 45d071c, efa367a na origin/main",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "f1fed29e-185a-4d54-8e7e-89b15dfee168",
+        "title":  "Cyberatak na infrastrukturę PL",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "doing",
+        "subcategory":  "ALERT"
+    },
+    {
+        "id":  "3eb126d8-d320-452e-be26-2a608dba2541",
+        "title":  "Czy Claude Code może budować agentów za nas?",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "73884806-11a0-48e7-a679-4e3c76f57991",
+        "title":  "DARIO 3.0 — aplikacja HTML na GitHub Pages (`marzenia42-png.github.io/dario-os/`)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SYSTEM"
+    },
+    {
+        "id":  "c4fa85ad-43fe-4835-bb6c-bedf430887e5",
+        "title":  "Drive CLAUDIA połączony przez rclone (`root_folder_id=1KoPvQbxVujtWegjqHR_cAyEZYEMTeKg6`)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SYSTEM"
+    },
+    {
+        "id":  "e5f07e52-0c0b-44d1-b5d1-27ced37deacb",
+        "title":  "Edge Function `lyra-chat` zbudowana i wdrożona w Supabase",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "971b2b3e-d3be-4619-9abf-3bb229491873",
+        "title":  "Edycja profilu (imię + focusAreas) w ProfileScreen",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "bed44a61-8bcf-4a2d-b21e-6d201c5017c6",
+        "title":  "ElevenLabs — anulowane na 04.05 (do powrotu po LYRA)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "79e2b7de-6d02-422d-bbdd-bba1e2edc952",
+        "title":  "ElevenLabs — wrócić gdy LYRA będzie gotowa (anulowane na 04.05)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "2859e16c-8075-4eb6-8cf9-30d6722d2b9a",
+        "title":  "Email przekierowanie `dbmeblepl@gmail.com → marzenia42@gmail.com`",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "9cae8f83-8c56-489a-aef5-23b0d247dc06",
+        "title":  "Email verify + reset hasła + delete_user",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "92afedaf-9268-4643-9057-422e070cfa1b",
+        "title":  "Espresso dark theme `#1A1208`",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "d8cbf1e8-aa85-4441-8320-8d92539c2f27",
+        "title":  "FB+IG Narbutas (kabiny akustyczne) — opublikowane",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "1786333d-a35d-47c4-a6d4-91ebe79af4e6",
+        "title":  "Folder `BEATA - DARIO - BETI 2.0` utworzony na Drive",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SYSTEM"
+    },
+    {
+        "id":  "5b287b7b-27dd-455c-bb9a-e7b2aa433f18",
+        "title":  "Formaty wizualne 2026 ustalone (LinkedIn karuzele PDF, FB/IG 1080×1350 4:5)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "5c4135e0-f7e0-4097-841b-6c27f7f595e7",
+        "title":  "GitHub `dario-os.skill` podmieniony na GitHub Pages",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SYSTEM"
+    },
+    {
+        "id":  "cf1848fe-42bc-4fca-825c-38a994cc735b",
+        "title":  "Hook PostToolUse w `settings.json` — auto-sync skilli po każdej edycji",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SYSTEM"
+    },
+    {
+        "id":  "f521e564-5aea-408a-97cf-c1e2057983b7",
+        "title":  "Kalendarz podłączony do briefingu i każdego czatu",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "ddbde39f-163b-4a45-8784-6b3fb0b284e1",
+        "title":  "Kalendarz: usunięto serię Kegel (event 451) i Stop-Start (event 452)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "655c787b-366d-4da9-821e-e93481d4769c",
+        "title":  "Kolejność agentów Make.com zaktualizowana (Agent Time dodany jako #5)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "bf5dc354-5e2f-4fbb-93cd-79ee995f9495",
+        "title":  "KSeF — terminy dla JDG",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "ALERT"
+    },
+    {
+        "id":  "c1540332-6682-4562-9e61-02c0d3c37ebb",
+        "title":  "Lekcja AI asystent DB Meble — architektura",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "efb45bb1-f5aa-491c-94a4-9d727c954e50",
+        "title":  "Lekcja DCA vs Lump Sum",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "f3410ff6-dc92-4d60-b3ae-8050c515e924",
+        "title":  "LinkedIn Narbutas — zaplanowany na 06.05 13:00 (profil Dariusz Barut)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "b3c43ff5-503e-4fb8-9f1a-7862018485b0",
+        "title":  "Lista Dario W19 utworzona na Drive (folder CLAUDIA)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "7b85cb00-8593-4f51-b54d-9a8cc551f7b8",
+        "title":  "Lista priorytetów DARIO OS (`dario-priorytety.html`)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SYSTEM"
+    },
+    {
+        "id":  "57156cd8-4ed9-4f30-bb44-d6c6158bc3c5",
+        "title":  "LISTA_DARIO_2026_W19.md zaktualizowana (tabelka nawyków + treningów A/B/C)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "7034288b-07b0-4829-aef9-d723631b3221",
+        "title":  "Lovable payments — bramka płatności w SOLA (nowa funkcja od 01.05)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "8c98ef8b-d5fd-4c79-85eb-61fff023e3f0",
+        "title":  "LYRA input handler",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "1b60f8cd-cdb9-42ae-a604-3f8fd86e110c",
+        "title":  "MARO Lano-E300 — post",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "d8157a64-c25e-4f63-b458-94c263bb4a2b",
+        "title":  "MDD Grand Grace — post FB+IG (13:07) + LinkedIn (29.04)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "80f4ef14-ac05-4cc1-8434-44e22bcc5681",
+        "title":  "MDD LINKA — post",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "c313251b-9db9-44e7-97a3-56a27292bb3b",
+        "title":  "MiCA — regulacje krypto UE",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "doing",
+        "subcategory":  "ALERT"
+    },
+    {
+        "id":  "7269476b-4159-4a74-8ffb-10596817a6a9",
+        "title":  "Migracja 006 (tabela `moods` + RLS + delete_user) wklejona w Supabase SQL Editor",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "427609ab-df03-4b3c-af66-b0487ec4f260",
+        "title":  "Migracja 007 (`lyra_response` column) zaaplikowana",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "49cc4cb0-961c-486a-b274-28b9ab9b14d0",
+        "title":  "Mikrofon klikalny (submit)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "ee312b16-029a-4aa5-9072-711000988d18",
+        "title":  "Naprawa `delete_user` RPC (RODO compliant)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "e15a0f43-3be3-44ca-b057-c869a5d782ba",
+        "title":  "Oferta email Karolina Wikiera-Choszczyk: WNL 208+ Malow, rabat 20%, 4 539,68 zł brutto (`OFERTA_WNL208_MALOW_Karolina.html`)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "21906d7f-a0ec-4dbc-8279-c7b159c04327",
+        "title":  "OLX Monitor Agent — był planowany jako #5, zastąpiony przez Agent Oferteo",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "f5b482cf-dc6f-443e-adf6-a6c89eec4721",
+        "title":  "Pamięć zoptymalizowana — 2 sloty zwolnione",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "09de85ef-2992-4451-8ea2-001683192bc7",
+        "title":  "Personal brand: gotowy na sprzedaż wdrożeń AI firmom (LinkedIn kluczowy)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "BIZNES"
+    },
+    {
+        "id":  "e75040c5-8339-4e2d-a138-10ddf485f823",
+        "title":  "Plik `ANGIELSKI_30min_dziennie.md` zapisany na Drive (Luke\u0027s English / BBC 6 Min English / The English We Speak)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "d4469618-8a34-4bd3-b8df-766979229c76",
+        "title":  "Pogrzeb 08.05 godz. 11:00 Kraków — dodany do kalendarza",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "KALENDARZ"
+    },
+    {
+        "id":  "aa481f3c-10eb-4805-b1a7-17538f622924",
+        "title":  "Privacy + Terms + RODO",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "99cc0c01-0dad-4922-8ccd-d96b7a90803b",
+        "title":  "Profil — nazwa i data",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "a1b3c4ec-bf98-4da1-b625-6ab8befc12a0",
+        "title":  "Prompt Bio-OS Vadyma zapisany na Drive",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "f76337e1-6cb1-41e1-80f7-63eec846b1a1",
+        "title":  "Prompt Clarity (Lovable) zapisany na Drive",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "3c4280b1-a169-4346-8db4-9f43cacec84b",
+        "title":  "Protokół \"koniec\" — automatyczne czyszczenie pamięci",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "dfdce1e8-f9a3-44e2-be1a-f1278afcff0b",
+        "title":  "Prototyp strony DB Concept Space v1 (`dbconceptspace.html`)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "DB CONCEPT"
+    },
+    {
+        "id":  "1b2ef224-120b-4423-9a22-300f9f733e18",
+        "title":  "Push na origin/main",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "d9eb70e9-927b-42c2-9726-de1dd7b0cf7e",
+        "title":  "rclone 1.74.0 — zainstalowany i skonfigurowany (auto-sync skilli)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SYSTEM"
+    },
+    {
+        "id":  "84c2f294-8190-4e08-8186-816ed519570e",
+        "title":  "Rutyny HTML — przebudowane na jasny styl",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "e0b424ec-e65d-4b79-bbe9-401c8bf0fa98",
+        "title":  "Rytm tygodniowy postów ustalony (Wt+Czw FB/IG, Śr+Pt LinkedIn, okna 9–11 / 13–15)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "d4f3fe0e-1e51-4c2f-a5fc-40b0270804a8",
+        "title":  "saveProfile: 3 źródła (supabase/guest/fallback), toast retry w onboardingu",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "f8e229b9-a838-4a12-8f81-1dae11869d0e",
+        "title":  "Sileo Evo — post",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "62d6f58e-c1be-4517-b4ab-f09db8e6b073",
+        "title":  "Skill dla Beaty/Kuby/Marcela — ankieta + prompt",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "b91a1428-377e-47d8-9cfb-f7f4572900c9",
+        "title":  "Splash screen minimalistyczny (czarny + gold)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "664af00d-270d-4b8c-971a-05963d1af2d0",
+        "title":  "Streak dzienny 🔥 (Supabase migration 004)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "74398496-c983-40b9-8759-473a819b7065",
+        "title":  "Styl osobisty Dario zapisany (jasny, minimalistyczny ≠ DB Meble)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "f0492234-cce8-4dad-9f1e-e609d1bc456b",
+        "title":  "System nauki: rotacja elastyczna, Angielski 30 min/dzień (słuchawki)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "689576da-92f2-45ba-856a-73479ac494b9",
+        "title":  "Toast \"Zapisano ✓\" po zapisie mooda",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "8b9ee63c-c36a-4b1d-a7a5-bc47ba88e33a",
+        "title":  "UI fix: area cards → modal \"Coming Soon\"",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "7c013562-5517-49b2-a1f3-ac72491bfad9",
+        "title":  "Umowa B2B między Dario a Beatą (faktury wzajemne)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "SPÓŁKA"
+    },
+    {
+        "id":  "6d9b09c3-e076-4dd3-bc9f-bea75f3f4b3b",
+        "title":  "UPGRADE BETI: każdy raport / PDF / strona inaczej wygląda",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "idea",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "db2ade37-a3ed-4d2d-a255-b99df5de0f4f",
+        "title":  "Usunięty teatralny spinner 1800ms (Step3Focus)",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "09d66d07-369a-4264-9fc8-2ecd7197cfd1",
+        "title":  "Vancouver Lite Profim — post FB+IG",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "9efa2e54-ab14-4d52-b440-ce9190a32bf4",
+        "title":  "Wizyta kontrolna Beaty 13.05 godz. 7:00 — dodana do kalendarza",
+        "area":  "praca",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "KALENDARZ"
+    },
+    {
+        "id":  "981a10b5-0cf6-4f3c-b68f-1f51ea3bf4ee",
+        "title":  "Agent Email DB — fix Telegram \"chat not found\" (`@DBMebleAgent_bot`, Chat ID `8579854811`)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "3333b5b6-9a40-496c-8e28-68c0b035c8f9",
+        "title":  "Agent Notatek — fix polling AssemblyAI (zwraca tylko ID, nie tekst)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "AGENCI"
+    },
+    {
+        "id":  "83f6b977-ac8e-4378-be73-81f89ebe57f1",
+        "title":  "Analiza 3 wariantów konwersji JDG→sp. z o.o. (min. 3 scenariusze)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "doing",
+        "subcategory":  "SPÓŁKA"
+    },
+    {
+        "id":  "cf028b0d-cea8-4ec1-91e1-ae6d8103b1d2",
+        "title":  "Claude Max — kupić na claude.ai (Partner Meble NIP 937-238-49-87, darek@partnermeble.pl). NIE przez Google Play!",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "abandoned",
+        "subcategory":  "ADMIN"
+    },
+    {
+        "id":  "f0c75485-27f6-480a-8005-bbe09d22236c",
+        "title":  "DB Concept Space AI — portal doradczy z AI znającym ofertę (na bazie `db-ai-knowledge`)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "DB CONCEPT"
+    },
+    {
+        "id":  "4fae5529-ac9e-494f-b124-ef6c1738103e",
+        "title":  "DB Meble sp. z o.o. + Partner Meble sp. z o.o. — do założenia (3 spółki docelowe)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "doing",
+        "subcategory":  "SPÓŁKA"
+    },
+    {
+        "id":  "19f493d1-bae7-4219-967f-0744aca48213",
+        "title":  "Decyzja: Palo Juice — kontynuować SEO 1000zł + AdWords 2000zł? (decyzja do 29.04, otwarta)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "792d291e-a827-4a82-b077-028c21aa4bac",
+        "title":  "JDG → sp. z o.o. — czekamy na tel od księgowego (polecony przez Maćka Wieczorka)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "doing",
+        "subcategory":  "SPÓŁKA"
+    },
+    {
+        "id":  "eb1f178f-30db-45db-a542-03fe45056635",
+        "title":  "LinkedIn B2B — profil + pierwsze posty (Dario osobisty)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "306b286f-5c8b-4de0-ba53-efa0113c7479",
+        "title":  "LinkedIn: ustawić email powiadomień na `dbmeblepl@gmail.com`",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "9c3463e7-70e4-4e57-905d-201af216c677",
+        "title":  "LYRA — nadal placeholder, niedziałająca (po naprawie Edge Function)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "abandoned",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "58e056db-74ae-4d32-82b0-725f6a1dca16",
+        "title":  "LYRA — sprawdzić logi Edge Function w Supabase → Logs, naprawić błąd `non-2xx status code` (sekret źle nazwany / stary klucz?)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "abandoned",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "47b39da9-ed72-4f4c-a9f8-ed560921b47a",
+        "title":  "Mechanizmy do analizy: Powołanie bez ZUS (art. 176 KSH), Estoński CIT, Pożyczka wspólnika, Najem od właściciela",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "doing",
+        "subcategory":  "SPÓŁKA"
+    },
+    {
+        "id":  "a1b44052-aeb3-4306-b600-bf0bd23d7911",
+        "title":  "Meta Business Suite: ustawić email powiadomień na `dbmeblepl@gmail.com`",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "f6fab969-08ed-4ddf-bc8e-6dd1927b3142",
+        "title":  "Nagrywanie szkoleń IK — automatyczna transkrypcja (Agent Notatek)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "BETI"
+    },
+    {
+        "id":  "157d35ab-ba2f-4c2e-a786-08177a20259c",
+        "title":  "Palo Juice — decyzja po 29.04 nieodnotowana (status: do potwierdzenia z Dario)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "50c313af-1bcd-46c1-969f-c52ff0efbcab",
+        "title":  "Personal brand Dario — konsultacje AI + Make.com dla firm lokalnych i B2B",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "DB MEBLE"
+    },
+    {
+        "id":  "54f0ee21-d7d4-4c91-8153-f12d2d5cc16e",
+        "title":  "Pierwsza karuzela LinkedIn w Canvie (PDF, 585% wyższe zaangażowanie niż tekst)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "88d91a0e-87e9-48e8-81d9-2e82fba37a4a",
+        "title":  "Plan 500k PLN/mies — DB Meble + SOLA + DB Concept Space + personal brand",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "BIZNES"
+    },
+    {
+        "id":  "cca2fd42-dc45-41bd-8597-cf15afbef7b9",
+        "title":  "Plan postów DB Meble — screeny od Dario → BETI analizuje → 4-tygodniowa karuzela",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "9e839399-688c-4a94-bc72-9c743ccc2bdd",
+        "title":  "Sesja planowania: 4 tygodnie postów z karuzelami (umówić termin)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "SOCIAL"
+    },
+    {
+        "id":  "b71a825d-e8d3-4b1e-9721-19311b37039f",
+        "title":  "SOLA LIFE sp. z o.o. — do założenia",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "doing",
+        "subcategory":  "SPÓŁKA"
+    },
+    {
+        "id":  "4eff4c07-6d08-47ee-bebb-12f14e4f50f6",
+        "title":  "SOLA-LAUNCH-CHECKLIST → go live (NIE LAUNCH przed checklistą!)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "doing",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "251614b1-4ed2-4200-8eca-5d8e06d7af4a",
+        "title":  "Sprawdzić ile skilli Code ulepszył (`! rclone lsf claudia:`)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "abandoned",
+        "subcategory":  "SYSTEM"
+    },
+    {
+        "id":  "104c0b78-386c-4a12-af74-6ee64ff748fe",
+        "title":  "Wgrać ulepszone skille do Project Knowledge (Akta w DARIO 2.0)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "abandoned",
+        "subcategory":  "SKILLE"
+    },
+    {
+        "id":  "2401aa1a-4006-4a8c-8ff6-d87ccd2e8c9f",
+        "title":  "Zastąpić wszystkie hardkodowane dane odczytami z Supabase",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "abandoned",
+        "subcategory":  "SOLA"
+    },
+    {
+        "id":  "18296eae-5ccc-4377-8f5d-cf056ba2d495",
+        "title":  "Znaleźć doradcę / kancelarię (zapytać Phil / IK / własne kontakty)",
+        "area":  "praca",
+        "priority":  "urgent",
+        "status":  "doing",
+        "subcategory":  "SPÓŁKA"
+    },
+    {
+        "id":  "c13be761-1e15-47c6-bd3c-833b60f0efe3",
+        "title":  "Beata folder Drive — udostępnić na `beata@dbmeble.pl` (link: drive.google.com/drive/folders/1WAL0ls-D7XpGUw85ozLbSCHDYQ00IzZt)",
+        "area":  "relacje",
+        "priority":  "important",
+        "status":  "abandoned",
+        "subcategory":  "RODZINA"
+    },
+    {
+        "id":  "19e4625e-36b6-4e19-bcea-682abd80255d",
+        "title":  "Obrączki ślubne — kiedy idziecie wybrać?",
+        "area":  "relacje",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "RODZINA"
+    },
+    {
+        "id":  "74dce148-aa34-445d-953e-d7281bc88212",
+        "title":  "Paulina (kuzynka) — umówić spotkanie weekendowe",
+        "area":  "relacje",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "RODZINA"
+    },
+    {
+        "id":  "c4f8cc6f-c79c-40a8-ab97-f17a8aa428e6",
+        "title":  "Rosja — eskalacja przy granicy PL",
+        "area":  "relacje",
+        "priority":  "important",
+        "status":  "todo",
+        "subcategory":  "ALERT"
+    },
+    {
+        "id":  "9c72943a-8ca8-4b36-a746-79ed6d3fc09a",
+        "title":  "Beata Drive — osobny folder z dostępem",
+        "area":  "relacje",
+        "priority":  "normal",
+        "status":  "abandoned",
+        "subcategory":  "RODZINA"
+    },
+    {
+        "id":  "548f05bf-b3fa-42fa-8918-cbf97ac39570",
+        "title":  "Hasło offline z Beatą ustalone",
+        "area":  "relacje",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "RODZINA"
+    },
+    {
+        "id":  "10eab0da-b539-4aa1-af7c-7c2c6959e6ad",
+        "title":  "Mobilizacja / pobór PL",
+        "area":  "relacje",
+        "priority":  "normal",
+        "status":  "doing",
+        "subcategory":  "ALERT"
+    },
+    {
+        "id":  "431f54b8-de1b-4db7-906f-d4f80506aad0",
+        "title":  "Fotoksiążka / pamiątka dla Beaty na ślub i urodziny",
+        "area":  "relacje",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "RODZINA"
+    },
+    {
+        "id":  "113f57a4-a80b-43a4-8337-6062f1ccec59",
+        "title":  "Lockdown UE / zamknięcie granic",
+        "area":  "relacje",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "ALERT"
+    },
+    {
+        "id":  "53d36efb-edec-4ff8-88d2-0122ccd638a8",
+        "title":  "Badania kontrolne: OB, CRP, SHBG, wolny testosteron (po 6 tyg.)",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "046db02d-ba3a-44ae-bc10-5fc64490d5e7",
+        "title":  "Cel 7.5–8h snu, kładzenie 21:00–21:40 (obecnie ~22:48)",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "376653b5-e87d-44ee-8bd3-bc18ea4d4737",
+        "title":  "Cel waga 78–80 kg",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "17001495-f721-4668-9726-0e8622f52ae8",
+        "title":  "Deepfake protection — omówić",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "a028b127-7848-4326-b83a-121d779722c6",
+        "title":  "Dr Górski — Pixel + GrapheneOS (przerobić lekcję)",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "653282bb-9db9-4eac-a5f5-983fe627c951",
+        "title":  "Facebook \"Jak można Cię znaleźć\" — ustawić",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "a21101a5-5545-4106-8732-9c6e05ce4d2d",
+        "title":  "Instagram — ustawienia prywatności (15 min!)",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "960d0f65-b85d-4251-8fe9-ced53ae8f92d",
+        "title":  "Laptop — hardening (osobna sesja)",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "42423a77-84c3-47d5-9e8e-28b86c700092",
+        "title":  "NAC odstawiony → Biowen 400 mg w drodze; docelowo Biowen NAC 600 mg (szukać dalej)",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "ffc52b9e-7a12-4c07-a537-c30551ee53ef",
+        "title":  "PassKey — po kursie Dr Górskiego",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "56bbcd2f-1203-4598-a813-eaafff639619",
+        "title":  "SafePass / biometria",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "e5bbcc4e-b8af-44ea-90ac-cee11754bc17",
+        "title":  "Signal — zainstalować (Beata + zaufani)",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "bd3487b0-0523-4367-a00b-1a85c908a4c2",
+        "title":  "Tomografia płuc LDCT — umówić",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "0bb21718-cd12-4ff8-981a-47e6e8756527",
+        "title":  "VPN — ProtonVPN — wybrać i zainstalować",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "80c837ce-f964-4f2f-8ae4-2df50d879d98",
+        "title":  "Waga 78–80 kg (obecnie ~82.4 kg)",
+        "area":  "zdrowie",
+        "priority":  "important",
+        "status":  "doing",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "59b7c915-3d99-4ffb-88fd-95c6bf9baffc",
+        "title":  "Badania kontrolne Beaty — wyniki prawie idealne 🎉",
+        "area":  "zdrowie",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "35f5e72e-da72-449b-a67b-2ff078bcf0c7",
+        "title":  "Brave laptop — pełna konfiguracja (Tarcze, HTTPS, WebRTC, wyszukiwarka, prywatność)",
+        "area":  "zdrowie",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "bd210bc7-8389-4966-8b18-7037a34226e1",
+        "title":  "Brave telefon (S23) — wyszukiwarka, tarcze, społeczności",
+        "area":  "zdrowie",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "ba80d004-52f1-438b-9ffd-23f68bb48b73",
+        "title":  "Claude in Brave — zbadane (działa z Chrome Web Store)",
+        "area":  "zdrowie",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "a3687a3f-1f86-4558-b877-754bf4c11a44",
+        "title":  "Dieta: usunięte orzechy + rodzynki → poprawa cery",
+        "area":  "zdrowie",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "0a0deef8-9042-487d-8825-8c776064c0f9",
+        "title":  "Facebook — uprawnienia + reklamy ograniczone",
+        "area":  "zdrowie",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "a31f1b2d-6448-492d-8243-30a40a8a271e",
+        "title":  "Google: historia / lokalizacja / reklamy / 14 aplikacji zahardowane",
+        "area":  "zdrowie",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "4cab2503-1ef4-4701-884b-6b082eb4ea4f",
+        "title":  "Hasło offline z Beatą — ustalone",
+        "area":  "zdrowie",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "197ede33-7eaa-47ee-96d0-9f9dedbff6f2",
+        "title":  "mObywatel — usunięty",
+        "area":  "zdrowie",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "BEZPIECZEŃSTWO"
+    },
+    {
+        "id":  "1d3e6c02-b653-4a17-8f71-0d0aef116728",
+        "title":  "Suplementy — pełny protokół PDF (Dario + Beata)",
+        "area":  "zdrowie",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "038778ef-35e7-4c13-91ca-265a105103ff",
+        "title":  "Waga 22.04: 82.3 kg (poprzednio 83.0) → −0.7 kg",
+        "area":  "zdrowie",
+        "priority":  "normal",
+        "status":  "done",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "483b45ae-f382-4640-9ba4-7bc25b83b08d",
+        "title":  "Beata — endokrynolog (Hashimoto faza nadczynności, TSH \u003c 0.01)",
+        "area":  "zdrowie",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "bbcf6569-8609-4a5c-9274-e41d2de8d706",
+        "title":  "Beata — NAC 600 mg",
+        "area":  "zdrowie",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "ab4d3241-2b42-4c51-8d04-d3a7e9e004fc",
+        "title":  "Beata — żelazo bisglicynian 50 mg (ferrytyna krytycznie niska 7.77)",
+        "area":  "zdrowie",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "9ccd4ed4-4d08-4a8f-a54e-c6d841d11f35",
+        "title":  "Biowen NAC — odebrać z Paczkomatu Bęczarka",
+        "area":  "zdrowie",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "ZDROWIE"
+    },
+    {
+        "id":  "68ccfa19-0a6d-4942-b643-bae3e1a30266",
+        "title":  "Dr Górski — kurs KUPIONY, NIEZACZĘTY od tygodni. Zacząć TERAZ",
+        "area":  "zdrowie",
+        "priority":  "urgent",
+        "status":  "todo",
+        "subcategory":  "NAUKA"
+    }
+]
