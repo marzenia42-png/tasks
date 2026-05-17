@@ -1,4 +1,4 @@
-const CACHE = 'zadania-dario-v6-glossy-waiting-ankieta';
+const CACHE = 'zadania-dario-v7-ankieta-filter-backlink';
 const ASSETS = [
   './',
   './index.html',

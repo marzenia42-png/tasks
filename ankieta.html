@@ -64,12 +64,42 @@
     background: linear-gradient(180deg, var(--bg-2), var(--bg));
     border-bottom: 1px solid var(--border);
   }
+  .topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    flex: 1;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    color: var(--gold);
+    text-decoration: none;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.15s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .back-link:hover { border-color: var(--gold); background: var(--bg-2); }
+  .back-link:active { transform: scale(0.96); }
   .topbar h1 {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.3px;
+    min-width: 0;
   }
   .topbar h1 .hl { color: var(--gold); }
+  @media (max-width: 420px) {
+    .topbar h1 { font-size: 16px; }
+    .back-link { padding: 6px 10px; font-size: 12px; }
+  }
   .counter {
     font-size: 13px;
     color: var(--text-mute);
@@ -236,7 +266,10 @@
 <div class="progress" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
 
 <header class="topbar">
-  <h1>Ankieta <span class="hl">zadań</span></h1>
+  <div class="topbar-left">
+    <a href="./" class="back-link" aria-label="Wróć do Tasks PWA">← Tasks</a>
+    <h1>Ankieta <span class="hl">zadań</span></h1>
+  </div>
   <span class="counter" id="counter">—</span>
 </header>
 
@@ -385,7 +418,7 @@
     const notInIds = Array.from(state.audited);
     const areasFilter = 'area=in.(' + SCOPE_AREAS.join(',') + ')';
     let q = '?select=id,name,area,priority,status,subcategory,source' +
-            '&status=neq.done' +
+            '&status=in.(todo,doing,waiting,idea)' +
             '&' + areasFilter +
             '&or=(subcategory.is.null,subcategory.neq.DATA)' +
             '&order=created_at.asc' +
