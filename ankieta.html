@@ -387,6 +387,7 @@
     let q = '?select=id,name,area,priority,status,subcategory,source' +
             '&status=neq.done' +
             '&' + areasFilter +
+            '&or=(subcategory.is.null,subcategory.neq.DATA)' +
             '&order=created_at.asc' +
             '&limit=' + BATCH;
     if (notInIds.length) q += '&id=not.in.(' + notInIds.join(',') + ')';
