@@ -222,6 +222,26 @@ select {
 .task[data-status="abandoned"] { opacity: 0.35; }
 .task[data-status="abandoned"] .task-name { text-decoration: line-through; color: var(--text-mute); font-style: italic; }
 .task[data-status="idea"] { border-left: 3px solid var(--gold-dark); }
+.task[data-status="waiting"] { opacity: 0.78; }
+.task[data-status="waiting"] .status-btn {
+  border-color: var(--important);
+  background: var(--bg-3);
+}
+.task[data-status="waiting"] .status-btn::after {
+  content: "⏸";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  color: var(--important);
+}
+.task[style*="--area-color"][data-status="waiting"] .status-btn {
+  border-color: var(--area-color);
+}
+.task[style*="--area-color"][data-status="waiting"] .status-btn::after {
+  color: var(--area-color);
+}
 
 .task[data-status="idea"] .status-btn {
   border-color: var(--gold-dark);

@@ -25,10 +25,10 @@
   }
 
   const PRIO_LABEL  = { urgent: '🔴 Pilne', important: '🟡 Ważne', normal: '🟢 Normalny' };
-  const STATUS_LABEL = { todo: 'Do zrobienia', doing: 'W toku', done: 'Zrobione', idea: 'Pomysł', abandoned: 'Porzucone' };
+  const STATUS_LABEL = { todo: 'Do zrobienia', doing: 'W toku', waiting: 'Czeka', done: 'Zrobione', idea: 'Pomysł', abandoned: 'Porzucone' };
   const PRIO_ORDER   = { urgent: 0, important: 1, normal: 2 };
-  const STATUS_ORDER = { doing: 0, todo: 1, idea: 2, done: 3, abandoned: 4 };
-  const STATUS_NEXT  = { todo: 'doing', doing: 'done', done: 'todo', idea: 'todo', abandoned: 'todo' };
+  const STATUS_ORDER = { doing: 0, todo: 1, waiting: 2, idea: 3, done: 4, abandoned: 5 };
+  const STATUS_NEXT  = { todo: 'doing', doing: 'done', waiting: 'doing', done: 'todo', idea: 'todo', abandoned: 'todo' };
 
   let state = {
     tasks: [],
@@ -261,7 +261,7 @@
       if (state.currentArea && t.area !== state.currentArea) return false;
       if (state.currentSubcat && t.subcategory !== state.currentSubcat) return false;
       if (state.filterStatus === 'ACTIVE') {
-        if (t.status === 'done' || t.status === 'abandoned' || t.status === 'idea') return false;
+        if (t.status === 'done' || t.status === 'abandoned' || t.status === 'idea' || t.status === 'waiting') return false;
       } else if (state.filterStatus === 'ARCHIVE') {
         if (t.status !== 'done') return false;
       } else if (t.status !== state.filterStatus) return false;
@@ -321,6 +321,7 @@
     const counts = {
       todo:      state.tasks.filter(t => t.status === 'todo').length,
       doing:     state.tasks.filter(t => t.status === 'doing').length,
+      waiting:   state.tasks.filter(t => t.status === 'waiting').length,
       done:      state.tasks.filter(t => t.status === 'done').length,
       idea:      state.tasks.filter(t => t.status === 'idea').length,
       abandoned: state.tasks.filter(t => t.status === 'abandoned').length
