@@ -8,13 +8,21 @@
   const HAS_CFG = CFG.url && CFG.anonKey && !CFG.url.startsWith('PLACEHOLDER');
 
   const AREAS = {
-    praca:    { emoji: '💼', label: 'Praca',    color: '#4A8FB8' },
-    zdrowie:  { emoji: '💚', label: 'Zdrowie',  color: '#7BA86A' },
-    relacje:  { emoji: '❤️', label: 'Relacje',  color: '#D44A3A' },
-    finanse:  { emoji: '💰', label: 'Finanse',  color: '#C9A96E' },
-    hobby:    { emoji: '🎯', label: 'Hobby',    color: '#B88B1E' },
-    marzenia: { emoji: '✨', label: 'Marzenia', color: '#8B6FB8' }
+    finanse:  { emoji: '💰', label: 'Finanse',  color: '#C9A96E', light: '#EAC588', dark: '#7A5A1F' },
+    zdrowie:  { emoji: '💚', label: 'Zdrowie',  color: '#10B981', light: '#6EE7B7', dark: '#047857' },
+    relacje:  { emoji: '❤️', label: 'Relacje',  color: '#F43F5E', light: '#FDA4AF', dark: '#9F1239' },
+    praca:    { emoji: '💼', label: 'Praca',    color: '#3B82F6', light: '#93C5FD', dark: '#1E3A8A' },
+    hobby:    { emoji: '🎯', label: 'Hobby',    color: '#14B8A6', light: '#5EEAD4', dark: '#0F766E' },
+    marzenia: { emoji: '✨', label: 'Marzenia', color: '#8B5CF6', light: '#C4B5FD', dark: '#5B21B6' }
   };
+
+  function setAreaVars(el, areaKey) {
+    if (!el || !AREAS[areaKey]) return;
+    const a = AREAS[areaKey];
+    el.style.setProperty('--area-color', a.color);
+    el.style.setProperty('--area-light', a.light);
+    el.style.setProperty('--area-dark', a.dark);
+  }
 
   const PRIO_LABEL  = { urgent: '🔴 Pilne', important: '🟡 Ważne', normal: '🟢 Normalny' };
   const STATUS_LABEL = { todo: 'Do zrobienia', doing: 'W toku', done: 'Zrobione', idea: 'Pomysł', abandoned: 'Porzucone' };
@@ -165,6 +173,9 @@
     document.getElementById('view-tasks').hidden    = state.view !== 'tasks';
     document.getElementById('back-btn').hidden      = state.view === 'areas';
     document.getElementById('loading-state').hidden = !state.loading;
+    document.body.classList.toggle('areas-view', state.view === 'areas');
+    if (state.currentArea && AREAS[state.currentArea]) setAreaVars(document.body, state.currentArea);
+    else { document.body.style.removeProperty('--area-color'); document.body.style.removeProperty('--area-light'); document.body.style.removeProperty('--area-dark'); }
 
     const title = document.getElementById('page-title');
     const bc = document.getElementById('breadcrumb');
@@ -191,6 +202,8 @@
 
   function renderAreas() {
     Object.keys(AREAS).forEach(a => {
+      const hex = document.querySelector('.hex[data-area="' + a + '"]');
+      if (hex) setAreaVars(hex, a);
       const n = state.tasks.filter(t => t.area === a && t.status !== 'done' && t.status !== 'abandoned').length;
       const el = document.querySelector('[data-area-count="' + a + '"]');
       if (el) el.textContent = n;
@@ -221,7 +234,7 @@
     sorted.forEach(([name, counts]) => {
       const node = tpl.content.firstElementChild.cloneNode(true);
       node.dataset.subcat = name;
-      node.style.setProperty('--area-color', AREAS[area].color);
+      setAreaVars(node, area);
       node.querySelector('.proj-name').textContent = name;
       const tCount = node.querySelector('.proj-count-todo');
       const dCount = node.querySelector('.proj-count-doing');
@@ -279,7 +292,7 @@
       const node = tpl.content.firstElementChild.cloneNode(true);
       node.dataset.id = t.id;
       node.dataset.status = t.status;
-      if (t.area && AREAS[t.area]) node.style.setProperty('--area-color', AREAS[t.area].color);
+      if (t.area && AREAS[t.area]) setAreaVars(node, t.area);
       node.querySelector('.task-name').textContent = t.name;
       const prioEl = node.querySelector('.badge.prio');
       prioEl.textContent = PRIO_LABEL[t.priority] || t.priority;
