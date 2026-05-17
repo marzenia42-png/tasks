@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#1A1208">
+<title>Ankieta zadań — Dario</title>
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<style>
+  :root {
+    --bg: #1A1208;
+    --bg-2: #241808;
+    --bg-3: #2E1F0C;
+    --card: #2A1C0A;
+    --border: #3A2A14;
+    --text: #F2E8D5;
+    --text-dim: #B8A883;
+    --text-mute: #8A7858;
+    --gold: #C9A96E;
+    --gold-bright: #E0BE82;
+    --gold-dark: #8B7448;
+    --urgent: #D44A3A;
+    --important: #E0B73C;
+    --normal: #7BA86A;
+    --doing: #4A8FB8;
+    --waiting: #B88B1E;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .progress {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 6px;
+    background: var(--bg-2);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-bright));
+    transition: width 0.35s ease;
+    box-shadow: 0 0 12px var(--gold);
+  }
+  .topbar {
+    padding: 16px 20px 10px;
+    padding-top: calc(16px + env(safe-area-inset-top));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(180deg, var(--bg-2), var(--bg));
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar h1 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .topbar h1 .hl { color: var(--gold); }
+  .counter {
+    font-size: 13px;
+    color: var(--text-mute);
+    white-space: nowrap;
+  }
+  .counter b { color: var(--gold); font-weight: 700; }
+  .container {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 18px 16px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+  .task-name {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--text);
+    margin-bottom: 8px;
+    word-wrap: break-word;
+  }
+  .task-meta {
+    font-size: 12px;
+    color: var(--text-mute);
+    margin-bottom: 4px;
+  }
+  .task-meta b {
+    color: var(--text-dim);
+    font-weight: 600;
+  }
+  fieldset {
+    border: none;
+    margin-top: 18px;
+  }
+  legend {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-mute);
+    margin-bottom: 10px;
+    padding: 0;
+  }
+  .radio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .radio-grid.three { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 420px) {
+    .radio-grid { grid-template-columns: 1fr; }
+    .radio-grid.three { grid-template-columns: 1fr; }
+  }
+  .radio-grid label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: var(--bg-3);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dim);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .radio-grid label:hover {
+    border-color: var(--gold-dark);
+    color: var(--text);
+  }
+  .radio-grid label input {
+    display: none;
+  }
+  .radio-grid label.selected {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--bg);
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(201, 169, 110, 0.35);
+  }
+  .submit-btn {
+    width: 100%;
+    background: var(--gold);
+    border: none;
+    color: var(--bg);
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 22px;
+    transition: all 0.15s;
+    font-family: inherit;
+    touch-action: manipulation;
+  }
+  .submit-btn:hover:not(:disabled) { background: var(--gold-bright); }
+  .submit-btn:active:not(:disabled) { transform: scale(0.98); }
+  .submit-btn:disabled {
+    background: var(--bg-3);
+    color: var(--text-mute);
+    cursor: not-allowed;
+  }
+  .ghost-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    width: 100%;
+    margin-top: 8px;
+    touch-action: manipulation;
+  }
+  .ghost-btn:hover { color: var(--gold); border-color: var(--gold); }
+  .status-line {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-mute);
+    padding: 12px 0;
+    min-height: 22px;
+  }
+  .status-line.error { color: var(--urgent); }
+  .status-line.ok { color: var(--normal); }
+  .done-card {
+    text-align: center;
+    padding: 36px 20px;
+  }
+  .done-card .emoji { font-size: 56px; margin-bottom: 16px; }
+  .done-card h2 { font-size: 22px; margin-bottom: 8px; }
+  .done-card p { color: var(--text-dim); margin-bottom: 22px; font-size: 14px; }
+  .skip-link {
+    display: inline-block;
+    margin-top: 12px;
+    text-align: center;
+    width: 100%;
+    color: var(--text-mute);
+    font-size: 13px;
+    text-decoration: none;
+    padding: 6px;
+  }
+  .skip-link:hover { color: var(--gold); }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+
+<header class="topbar">
+  <h1>Ankieta <span class="hl">zadań</span></h1>
+  <span class="counter" id="counter">—</span>
+</header>
+
+<main class="container">
+
+  <article class="card" id="task-card" hidden>
+    <h2 class="task-name" id="task-name">…</h2>
+    <p class="task-meta" id="task-meta"></p>
+
+    <fieldset>
+      <legend>Obszar życia</legend>
+      <div class="radio-grid" id="area-grid"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Priorytet</legend>
+      <div class="radio-grid three" id="prio-grid"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Status</legend>
+      <div class="radio-grid" id="status-grid"></div>
+    </fieldset>
+
+    <button class="submit-btn" id="submit-btn" disabled>Zatwierdź i następne →</button>
+    <a href="#" class="skip-link" id="skip-link">Pomiń to zadanie (bez zmian)</a>
+
+    <p class="status-line" id="status-line"></p>
+  </article>
+
+  <article class="card done-card" id="done-card" hidden>
+    <div class="emoji">🎉</div>
+    <h2>Wszystko zatwierdzone</h2>
+    <p id="done-info">Wszystkie zadania w obszarach Praca / Relacje / Marzenia są przejrzane.</p>
+    <button class="ghost-btn" id="reload-btn">Sprawdź jeszcze raz</button>
+    <a href="./" class="skip-link">← Wróć do listy zadań</a>
+  </article>
+
+  <article class="card" id="loading-card">
+    <p class="status-line">Ładuję zadania…</p>
+  </article>
+
+</main>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  const CFG = window.SUPABASE_CONFIG || {};
+  const TABLE = CFG.table || 'dario_tasks';
+  if (!CFG.url || !CFG.anonKey) {
+    document.getElementById('loading-card').innerHTML =
+      '<p class="status-line error">Brak konfiguracji Supabase (config.js)</p>';
+    return;
+  }
+  const API = CFG.url.replace(/\/$/, '') + '/rest/v1/' + TABLE;
+  const H = {
+    apikey: CFG.anonKey,
+    Authorization: 'Bearer ' + CFG.anonKey,
+    'Content-Type': 'application/json'
+  };
+
+  const AREAS = [
+    { value: 'praca',    label: '💼 Praca' },
+    { value: 'zdrowie',  label: '💚 Zdrowie' },
+    { value: 'relacje',  label: '❤️ Relacje' },
+    { value: 'finanse',  label: '💰 Finanse' },
+    { value: 'hobby',    label: '🎯 Hobby' },
+    { value: 'marzenia', label: '✨ Marzenia' }
+  ];
+  const PRIO = [
+    { value: 'urgent',    label: '🔴 Pilne' },
+    { value: 'important', label: '🟡 Ważne' },
+    { value: 'normal',    label: '🟢 Normalne' }
+  ];
+  const STATUS = [
+    { value: 'todo',      label: 'Do zrobienia' },
+    { value: 'doing',     label: 'W toku' },
+    { value: 'waiting',   label: '⏸ Czeka' },
+    { value: 'idea',      label: '💡 Pomysł' },
+    { value: 'abandoned', label: '✖ Porzuć' }
+  ];
+
+  const BATCH = 10;
+  const SCOPE_AREAS = ['praca', 'relacje', 'marzenia'];
+
+  let state = {
+    queue: [],          // pending tasks in current batch
+    audited: new Set(), // ids already processed in this session
+    totalProcessed: 0,
+    current: null,
+    selected: { area: null, priority: null, status: null }
+  };
+
+  function $(id) { return document.getElementById(id); }
+
+  function buildRadios(containerId, items, key) {
+    const c = $(containerId);
+    c.innerHTML = '';
+    items.forEach(it => {
+      const id = key + '-' + it.value;
+      const lbl = document.createElement('label');
+      lbl.dataset.value = it.value;
+      lbl.innerHTML = '<input type="radio" name="' + key + '" value="' + it.value + '" id="' + id + '">' +
+                      '<span>' + it.label + '</span>';
+      lbl.addEventListener('click', (e) => {
+        e.preventDefault();
+        selectRadio(containerId, key, it.value);
+      });
+      c.appendChild(lbl);
+    });
+  }
+
+  function selectRadio(containerId, key, value) {
+    state.selected[key] = value;
+    const c = $(containerId);
+    c.querySelectorAll('label').forEach(l => {
+      l.classList.toggle('selected', l.dataset.value === value);
+      const inp = l.querySelector('input');
+      if (inp) inp.checked = l.dataset.value === value;
+    });
+    updateSubmitState();
+  }
+
+  function updateSubmitState() {
+    const s = state.selected;
+    $('submit-btn').disabled = !(s.area && s.priority && s.status);
+  }
+
+  function setStatus(msg, cls) {
+    const el = $('status-line');
+    el.textContent = msg || '';
+    el.className = 'status-line' + (cls ? ' ' + cls : '');
+  }
+
+  function updateProgress() {
+    const total = state.queue.length + state.totalProcessed + (state.current ? 1 : 0);
+    const done = state.totalProcessed;
+    const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+    $('progress-fill').style.width = pct + '%';
+    $('counter').innerHTML = '<b>' + done + '</b> / ' + total;
+  }
+
+  async function fetchBatch() {
+    const notInIds = Array.from(state.audited);
+    const areasFilter = 'area=in.(' + SCOPE_AREAS.join(',') + ')';
+    let q = '?select=id,name,area,priority,status,subcategory,source' +
+            '&status=neq.done' +
+            '&' + areasFilter +
+            '&order=created_at.asc' +
+            '&limit=' + BATCH;
+    if (notInIds.length) q += '&id=not.in.(' + notInIds.join(',') + ')';
+    const r = await fetch(API + q, { headers: H });
+    if (!r.ok) throw new Error('HTTP ' + r.status + ' — ' + (await r.text()));
+    return await r.json();
+  }
+
+  async function patchTask(id, patch) {
+    const r = await fetch(API + '?id=eq.' + id, {
+      method: 'PATCH',
+      headers: Object.assign({}, H, { Prefer: 'return=minimal' }),
+      body: JSON.stringify(patch)
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status + ' — ' + (await r.text()));
+  }
+
+  function renderCurrent() {
+    const t = state.current;
+    if (!t) {
+      $('task-card').hidden = true;
+      $('done-card').hidden = false;
+      $('loading-card').hidden = true;
+      $('done-info').textContent = state.totalProcessed > 0
+        ? 'Przejrzano ' + state.totalProcessed + ' zadań w tej sesji. Brak więcej do zaakceptowania.'
+        : 'Wszystkie zadania w obszarach Praca / Relacje / Marzenia są już oznaczone.';
+      $('progress-fill').style.width = '100%';
+      $('counter').innerHTML = '<b>' + state.totalProcessed + '</b> przejrzane';
+      return;
+    }
+    $('loading-card').hidden = true;
+    $('done-card').hidden = true;
+    $('task-card').hidden = false;
+    $('task-name').textContent = t.name || '(bez tytułu)';
+    const parts = [];
+    if (t.subcategory) parts.push('<b>' + escapeHtml(t.subcategory) + '</b>');
+    if (t.source) parts.push(escapeHtml(t.source));
+    $('task-meta').innerHTML = parts.join(' · ');
+
+    selectRadio('area-grid',   'area',     t.area || null);
+    selectRadio('prio-grid',   'priority', t.priority || null);
+    selectRadio('status-grid', 'status',   t.status || null);
+
+    setStatus('');
+    updateProgress();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  async function nextTask() {
+    if (state.queue.length === 0) {
+      setStatus('Pobieram kolejne…');
+      try {
+        const more = await fetchBatch();
+        state.queue = more;
+      } catch (e) {
+        setStatus('Błąd pobierania: ' + e.message, 'error');
+        return;
+      }
+    }
+    state.current = state.queue.shift() || null;
+    renderCurrent();
+  }
+
+  async function submitCurrent() {
+    const t = state.current;
+    const s = state.selected;
+    if (!t || !s.area || !s.priority || !s.status) return;
+    $('submit-btn').disabled = true;
+    setStatus('Zapisuję…');
+    try {
+      await patchTask(t.id, { area: s.area, priority: s.priority, status: s.status });
+      state.audited.add(t.id);
+      state.totalProcessed++;
+      setStatus('Zapisane ✓', 'ok');
+      setTimeout(() => nextTask(), 200);
+    } catch (e) {
+      setStatus('Błąd zapisu: ' + e.message, 'error');
+      $('submit-btn').disabled = false;
+    }
+  }
+
+  function skipCurrent(e) {
+    e.preventDefault();
+    if (!state.current) return;
+    state.audited.add(state.current.id); // nie wraca w tej sesji
+    nextTask();
+  }
+
+  async function reload() {
+    state.queue = [];
+    state.audited = new Set();
+    state.totalProcessed = 0;
+    state.current = null;
+    state.selected = { area: null, priority: null, status: null };
+    $('done-card').hidden = true;
+    $('loading-card').hidden = false;
+    await nextTask();
+  }
+
+  function init() {
+    buildRadios('area-grid',   AREAS,  'area');
+    buildRadios('prio-grid',   PRIO,   'priority');
+    buildRadios('status-grid', STATUS, 'status');
+    $('submit-btn').addEventListener('click', submitCurrent);
+    $('skip-link').addEventListener('click', skipCurrent);
+    $('reload-btn').addEventListener('click', reload);
+    nextTask();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>
